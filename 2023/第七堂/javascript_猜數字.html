@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .box{
+            width: 350px;
+            text-align: center;
+            background-color: antiquewhite;
+            margin: 3em auto;
+            padding: 1em 2em;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box h1{
+            margin:0 auto 0.5em;
+            
+        }
+
+        .box input{
+            display: block;
+            width: 70%;
+            padding:0.5em;
+            font-size: 18px;           
+        }
+        
+        .box button{
+            display: block;
+            width: 30%;
+            font-size: 18px;
+            padding: 0.3em;
+        }
+
+        .box ol{
+            width: 100%;
+            padding: 1em 2em;
+        }
+
+        .box ol li{
+            padding: 0.25em;
+        }
+
+        .box details ul{
+            padding: 1em;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>猜數字遊戲</h1>
+        <input type="text" id="user" placeholder="請輸入4位數字" maxlength="4">
+        <button type="button" id="btn">送出</button>
+        <ol>
+
+        </ol>
+        <details>
+            <summary>遊戲說明</summary>
+            <ul>
+                <li>以前權力平方米由此，毫不自信，論壇也要。</li>
+                <li>以前權力平方米由此，毫不自信，論壇也要。</li>
+                <li>以前權力平方米由此，毫不自信，論壇也要。</li>
+                <li>以前權力平方米由此，毫不自信，論壇也要。</li>
+            </ul>
+        </details>
+    </div>
+</body>
+</html>
+<script>
+    // CPU's design
+    var cpu = [];
+    for(i = 0; i < 4; i++){
+        cpu[i] = Math.floor(Math.random()*10);
+        if (cpu[0] == 0){
+            cpu[i] = Math.floor(Math.random()*10);
+        }else if(cpu[0] == cpu[1] || cpu[0] == cpu[2] || cpu[0] == cpu[3] || cpu[1] == cpu[2] || cpu[1] == cpu[3] || cpu[2] == cpu[3]){
+            cpu[i] = Math.floor(Math.random()*10);
+        }
+
+    }
+
+    
+    console.log(cpu[0], cpu[1], cpu[2], cpu[3]);
+    document.write(cpu[0], cpu[1], cpu[2], cpu[3]);
+
+    // user's desigin
+    let count = 0;
+    let txt, a, b;    
+    let btn = document.getElementById("btn");
+    let ol = document.getElementsByTagName("ol")[0];
+    btn.addEventListener("click", function(){
+        a, b = 0;
+        let user = document.getElementById("user");
+        let userVal = user.value;
+        if(isNaN(Number(user.value))){
+            txt = "輸入錯誤，請輸入數值"
+        }
+        else if (Number(userVal[0]) == 0){
+            txt = "第一個數字不可為0";
+            count++;
+        }else if(user.value.length < 4){
+            txt = "請輸入4個數字"
+            count++;
+        }else if(Number(userVal[0]) == Number(userVal[1]) || Number(userVal[0]) == Number(userVal[2]) || Number(userVal[0]) == Number(userVal[3]) || Number(userVal[1]) == Number(userVal[2]) || Number(userVal[1]) == Number(userVal[3]) || Number(userVal[2]) == Number(userVal[3])){
+            txt = "數字不可重複";
+        }else{
+            determination();
+        }
+        console.log(Number(user.value));
+
+        // 判定A
+        function determination(){
+            if(cpu[0] == Number(userVal[0])){
+                a++;
+            }
+            if(cpu[1] == Number(userVal[1])){
+                a++;
+            }
+            if(cpu[2] == Number(userVal[2])){
+                a++;
+            }
+            if(cpu[3] == Number(userVal[3])){
+                a++;
+            }
+            txt = a+"A";
+        }
+
+        let li = document.createElement("li");
+        li.textContent = `${txt}`;
+        ol.appendChild(li);
+
+        user.value = "";
+        txt = "";
+    })
+</script>

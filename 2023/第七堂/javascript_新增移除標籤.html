@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 350px;
+            margin:5em auto;
+            padding: 1em;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box input{
+            display: block;
+            width: 70%;
+            font-size: 20px;
+            padding: 0.5em;
+        }
+
+        .box button{
+            display: block;
+            width: 30%;
+            font-size: 20px;
+            padding: 0 0.5em;
+        }
+
+        .box ul{
+            width: 100%;
+
+        }
+        .box ul li{
+            list-style: disc;
+            display: block;
+            list-style-position: inside;
+            padding: 0.5em;
+        }
+
+        .box ul li:hover{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" id="user">
+        <button type="button" id="btn">create</button>
+        <ul></ul>
+    </div>
+</body>
+</html>
+<script>
+    let ul = document.getElementsByTagName("ul")[0];
+
+    document.getElementById("btn").addEventListener("click", function(){
+        let user = document.getElementById("user");
+        let li = document.createElement("li");
+        li.textContent = user.value;
+        ul.appendChild(li);
+        user.value = "";
+        user.focus();
+
+        let item = document.getElementsByTagName("li");
+        for (const i of item){
+            i.addEventListener("click", function(){
+                this.remove();
+            })
+        }
+    })
+    
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            CSS權重
+                element(標籤)
+                    h1、p、a -> 1分
+
+                class類別
+                    ex: .app .user -> 10分
+
+                id 
+                    ex: #app #user -> 100分
+
+                行內式
+                    style="..." 1000分
+                
+                !important
+                    10000分
+
+        */
+        h1{
+            color: red!important;
+        }
+
+        .app{
+            color: green;
+        }
+
+        #bpp{
+            color: blue;
+        }
+
+        h1{
+            color:blue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>老婆經濟發展，招標。</h1>
+    <h1 class="app">老婆經濟發展，招標。</h1>
+    <h1 class="app" id="bpp">老婆經濟發展，招標。</h1>
+    
+</body>
+</html>

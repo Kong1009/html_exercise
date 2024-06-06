@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>跟隨我</div>
+    <h2></h2>
+</body>
+</html>
+<script>
+    window.addEventListener("mousemove", function(e){
+        let div = document.getElementsByTagName("div")[0];
+        let x = e.clientX;
+        let y = e.clientY;
+        div.style.position = "absolute";
+        div.style.top = y  + "px";
+        div.style.left = x +5 + "px";
+    })
+</script>

@@ -1,0 +1,377 @@
+html, body, header, footer, nav, menu, main, aside, article, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, ol, img, input, button{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+:root{
+    --light: #ffcc00;
+    --dark: #ff6a00;
+    --white: #ffffff;
+    --gray: #aaaaaa;
+    --indigo: #8d0eb0;
+}
+
+img{
+    width: 100%;
+    /* 防露白 */
+    vertical-align: bottom;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 20px;
+    color: var(--light);
+    background-color: #00000099;
+    border: 2px solid var(--light);
+}
+.btn:hover{
+    border: 2px solid var(--indigo);
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-justify{
+    text-align: justify;
+}
+.text-light{
+    color: var(--light);
+}
+.col-theme{
+    display: block;
+    /* width: 150px; */
+    /* height: 150px; */
+    width: calc(100vw / 3);
+    height: calc(100vw / 3);
+    line-height: calc(100vw / 3);
+    margin: 25px;
+    border: 5px solid var(--dark);
+    border-radius: 50%;
+    font-size: 10vw;
+    color: var(--white);
+    text-align: center;
+    font-weight: 900;
+    box-shadow: 5px 5px 3px #333;
+    /* transition: all 500ms linear; */
+}
+.col-theme:hover{
+    border: 5px solid var(--light);
+    color: var(--dark);
+    box-shadow: 5px 5px 3px #333 inset;
+}
+
+.col-1{
+    width: calc(100% / 12 * 1);
+}
+.col-2{
+    width: calc(100% / 12 * 2);
+}
+.col-3{
+    width: calc(100% / 12 * 3);
+}
+.col-4{
+    width: calc(100% / 12 * 4);
+}
+.col-5{
+    width: calc(100% / 12 * 5);
+}
+.col-6{
+    width: calc(100% / 12 * 6);
+}
+.col-7{
+    width: calc(100% / 12 * 7);
+}
+.col-8{
+    width: calc(100% / 12 * 8);
+}
+.col-9{
+    width: calc(100% / 12 * 9);
+}
+.col-10{
+    width: calc(100% / 12 * 10);
+}
+.col-11{
+    width: calc(100% / 12 * 11);
+}
+.col-12{
+    width: calc(100% / 12 * 12);
+}
+
+/* 主要畫面設計 Theme's Design */
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/backimg.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+header{
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    position: relative;
+}
+header .col-md-4 h1{
+    color: var(--light);
+    font-weight: 900;
+    text-shadow: 3px 3px 3px #000;
+}
+header .col-md-4:nth-of-type(3){
+    letter-spacing: 8px;
+    color: var(--white);
+    font-size: 32px;
+    vertical-align: top;
+}
+
+
+header .col-md-4:nth-of-type(3) .fa-line{
+    font-size: 30px;
+}
+header .fa-line:hover{
+    color: green;
+}
+header .fa-square-facebook:hover{
+    color: rgb(78, 78, 228);
+}
+header .fa-square-instagram:hover{
+    color: rgb(234, 192, 146);
+}
+header nav{
+    position: absolute;
+    top: 0;
+    right: 1em;
+    color: var(--white);
+}
+header .share{
+    width: 100px;
+    border: 2px solid var(--indigo);
+    background-color: #00000099;
+    position: absolute;
+    right: 30px;
+    top: 55px;
+    border-radius: 10%;
+    display: none;
+}
+header .share a{
+    display: block;
+    width: 100%;
+    line-height: 45px;
+}
+
+#service h2{    
+    padding: 4em 0;
+}
+
+footer{
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    color: var(--gray);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* and 前後的空白是必要的 */
+@media only screen and (min-width: 320px){
+    .col-sm-1{
+        width: calc(100% / 12 * 1);
+    }
+    .col-sm-2{
+        width: calc(100% / 12 * 2);
+    }
+    .col-sm-3{
+        width: calc(100% / 12 * 3);
+    }
+    .col-sm-4{
+        width: calc(100% / 12 * 4);
+    }
+    .col-sm-5{
+        width: calc(100% / 12 * 5);
+    }
+    .col-sm-6{
+        width: calc(100% / 12 * 6);
+    }
+    .col-sm-7{
+        width: calc(100% / 12 * 7);
+    }
+    .col-sm-8{
+        width: calc(100% / 12 * 8);
+    }
+    .col-sm-9{
+        width: calc(100% / 12 * 9);
+    }
+    .col-sm-10{
+        width: calc(100% / 12 * 10);
+    }
+    .col-sm-11{
+        width: calc(100% / 12 * 11);
+    }
+    .col-sm-12{
+        width: calc(100% / 12 * 12);
+    }
+}
+@media only screen and (min-width: 768px){
+    .col-theme{
+        display: block;
+        /* width: 150px; */
+        /* height: 150px; */
+        width: calc(100vw / 5.5);
+        height: calc(100vw / 5.5);
+        line-height: calc(100vw / 5.5);
+        margin: 25px;
+        border: 5px solid var(--dark);
+        border-radius: 50%;
+        font-size: 5vw;
+        color: var(--white);
+        text-align: center;
+        font-weight: 900;
+    }
+    .col-md-1{
+        width: calc(100% / 12 * 1);
+    }
+    .col-md-2{
+        width: calc(100% / 12 * 2);
+    }
+    .col-md-3{
+        width: calc(100% / 12 * 3);
+    }
+    .col-md-4{
+        width: calc(100% / 12 * 4);
+    }
+    .col-md-5{
+        width: calc(100% / 12 * 5);
+    }
+    .col-md-6{
+        width: calc(100% / 12 * 6);
+    }
+    .col-md-7{
+        width: calc(100% / 12 * 7);
+    }
+    .col-md-8{
+        width: calc(100% / 12 * 8);
+    }
+    .col-md-9{
+        width: calc(100% / 12 * 9);
+    }
+    .col-md-10{
+        width: calc(100% / 12 * 10);
+    }
+    .col-md-11{
+        width: calc(100% / 12 * 11);
+    }
+    .col-md-12{
+        width: calc(100% / 12 * 12);
+    }
+    header .share{
+        width: calc(100% / 12 * 4);
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        position: static;
+        display: block!important;
+    }
+    header .share a{
+        display: inline;
+        width: auto;
+        line-height: 45px;
+    }
+    header nav{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .col-lg-1{
+        width: calc(100% / 12 * 1);
+    }
+    .col-lg-2{
+            width: calc(100% / 12 * 2);
+    }
+    .col-lg-3{
+            width: calc(100% / 12 * 3);
+    }
+    .col-lg-4{
+            width: calc(100% / 12 * 4);
+    }
+    .col-lg-5{
+            width: calc(100% / 12 * 5);
+    }
+    .col-lg-6{
+            width: calc(100% / 12 * 6);
+    }
+    .col-lg-7{
+            width: calc(100% / 12 * 7);
+    }
+    .col-lg-8{
+            width: calc(100% / 12 * 8);
+    }
+    .col-lg-9{
+            width: calc(100% / 12 * 9);
+    }
+    .col-lg-10{
+            width: calc(100% / 12 * 10);
+    }
+    .col-lg-11{
+            width: calc(100% / 12 * 11);
+    }
+    .col-lg-12{
+            width: calc(100% / 12 * 12);
+    }
+}
+@media only screen and (min-width: 1280px){
+    .col-xl-1{
+        width: calc(100% / 12 * 1);
+        }
+    .col-xl-2{
+            width: calc(100% / 12 * 2);
+    }
+    .col-xl-3{
+            width: calc(100% / 12 * 3);
+    }
+    .col-xl-4{
+            width: calc(100% / 12 * 4);
+    }
+    .col-xl-5{
+            width: calc(100% / 12 * 5);
+    }
+    .col-xl-6{
+            width: calc(100% / 12 * 6);
+    }
+    .col-xl-7{
+            width: calc(100% / 12 * 7);
+    }
+    .col-xl-8{
+            width: calc(100% / 12 * 8);
+    }
+    .col-xl-9{
+            width: calc(100% / 12 * 9);
+    }
+    .col-xl-10{
+            width: calc(100% / 12 * 10);
+    }
+    .col-xl-11{
+            width: calc(100% / 12 * 11);
+    }
+    .col-xl-12{
+            width: calc(100% / 12 * 12);
+    }
+}

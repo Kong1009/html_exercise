@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            display: flex 彈性盒子
+                flex-wrap 超出範圍是否換行
+                    nowrap 不換行
+                    wrap 換行
+                justify-content 水平對齊
+                    justify-content: start; 對齊結束位置
+                    justify-content: end; 對齊起始位置 
+                    justify-content: center;  置中
+                align-items 垂直對齊物件下方
+                    align-items: flex-end;  對齊結束物件           
+                    align-items: flex-start; 對齊起始物件
+                    align-items: center; 對齊物件
+        */  
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+            width: 100%;
+            /* 父系不會刻意給高度，讓物件來撐開就好 */
+            /* height: 80px; */
+            display: flex;
+
+            flex-wrap: nowrap;
+            flex-wrap: wrap;
+
+            justify-content: start;
+            justify-content: end;
+            justify-content: center;
+
+            align-items: flex-end;            
+            align-items: flex-start;
+            align-items: center;
+
+
+
+        }
+
+        header menu{
+            width: 700px;
+            height: 80px;
+            background-color: red;
+            /* display: inline-block; */
+        }
+
+        header nav{
+            width: 70%;
+            height: 100px;
+            background-color: blue;
+            /* display: inline-block; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <menu></menu>
+        <nav></nav>
+    </header>
+    
+</body>
+</html>

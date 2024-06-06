@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            font-size文字大小
+                預設大小16px; 最小12px               
+
+                絕對單位
+                    px 像素
+                    pt 點
+                    cm、mm、in、pc
+
+                相對單位
+                    em 依照父系字來做 乘
+                        假設預設為16px 設為2em時 會依照父系的字元來做調整 => 16 * 2em
+                    
+                    rem 根字元
+                    vw 視窗寬度
+                    vh 視窗高度
+                    % 百分比
+                        假設50%    16px * 50%
+
+        */
+        p{
+            font-size: 16px;
+            font-size: 12pt;
+            font-size: 5cm;
+            font-size: 5mm;
+            font-size: 5in;
+            font-size: 5pc;
+
+            /* 相對單位 */
+            font-size: 2em;
+            font-size: 5vw;
+            font-size: 50%;
+        }
+
+        div{
+            /* font-size: 32px; */
+        }
+    </style>
+</head>
+<body>
+    <div>伺服器遭遇做什麼日本如今三大，消費吃了。</div>
+    <p>威脅區別心裡，上述。</p>
+
+    <div>
+        <p>
+            比賽說過信心體驗一。
+        </p>
+    </div>
+</body>
+</html>

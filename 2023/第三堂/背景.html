@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            background-color 背景顏色
+            background-color 背影圖片
+                background-color: url(網址) ;
+
+            background-repeat 背景圖片排列
+                background-repeat: no-repeat; 不重複
+                background-repeat: repeat-x; 水平排列
+                background-repeat: repeat-y; 垂直排列
+                background-repeat: repeat; 並列填滿
+
+            background-size 背景圖片大小
+                background-size: auto; 自動
+                background-size: contain; 等比例縮放，並符合框架大小
+                background-size: cover; 等比例縮放並填滿框架
+
+            background-position 背景圖片位置 先水平後垂直
+                background-position:
+                    left、right、top、bottom、center
+        */
+        div{
+            width: 500px;
+            height: 500px;
+            background-color: brown;
+            background-image: url(https://picsum.photos/id/237/400/300);
+
+            /* 背景排列方式 */
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: repeat;
+            background-repeat: no-repeat;
+
+            /* 背景大小 */
+            background-size: auto;
+            background-size: contain;
+            background-size: cover;
+
+            /* 背景位置 */
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

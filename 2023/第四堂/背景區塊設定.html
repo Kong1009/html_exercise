@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            background-attachment 背景圖位置在區塊位置
+                background-attachment: local; 預設
+                background-attachment: scroll; 滾動效果
+                background-attachment: fixed; 固定效果
+        */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div{
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: local;
+            background-attachment: scroll;
+            background-attachment: fixed;
+        }
+
+        #header{
+            background-image: url(../images/97548.jpg);
+        }
+        #main{
+            background-image: url(../images/462370.jpg);
+        }
+        #article{
+            background-image: url(../images/463880.jpg);
+        }
+        #footer{
+            background-image: url(../images/662213.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="main"></div>
+    <div id="article"></div>
+    <div id="footer"></div>
+    
+</body>
+</html>

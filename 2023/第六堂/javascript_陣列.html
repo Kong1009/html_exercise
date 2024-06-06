@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let names = ["gary", "mary", "hary", "hery", "jary","john", "alice"]
+
+    // 增加內容在最後面 同python list.append()
+    names.push("Dan")
+
+    // 增加內容在最前面
+    names.unshift("fany", "king");
+
+    // 刪除最後的內容
+    names.pop();
+
+    // 刪除第一個內容
+    names.shift();
+
+    // 刪除陣列內容，並保留位置
+    delete names[3];
+
+    // 陣列.splice(位置, 數量(往後面刪除的數量), 增加內容); 
+    names.splice(2, 2, "Ice");
+
+    // 排序
+    names.sort();
+
+    // 反向排序
+    names.reverse();
+    for(const i of names){
+        document.write(i+"<br>");
+        console.log(i);
+    }
+
+</script>

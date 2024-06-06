@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let classmeta = [{
+        name: "Mary",
+        years: 18,
+        gender: "Girl",
+        tel: "0912345678"
+    },{
+        name: "Gary",
+        years: 19,
+        gender: "Boy",
+        tel: "0912345678"
+    },{
+        name: "Hary",
+        years: 20,
+        gender: "Girl",
+        tel: "0912345678"
+    },{
+        name: "Jary",
+        years: 117,
+        gender: "Boy",
+        tel: "0912345678"
+    }]
+
+    for (const key in classmeta) {
+        console.log(key);
+    }
+
+    for (const i of classmeta) {
+        for (const key in i) {
+            console.log(i[key]);
+            document.write(key+": "+i[key]+"<br>");
+        }
+        document.write("<br>");
+        console.log(i.name);
+    }
+</script>

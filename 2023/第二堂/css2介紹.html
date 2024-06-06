@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            元素.類別 -> 元素本身的類別
+
+            元素 .類別 -> 元素的兒子類別
+
+            元素 > .類別 -> 元素的兒子類別，只有下一代，最多只能出現兩個【>】
+
+            元素 ~ .類別 -> 元素下個類別的兄弟、子孫們
+        */
+        h2{
+            color: red;
+        }
+
+        h2.green{
+            color: green;
+        }
+
+
+        h2 .green{
+            color: indigo;
+        }
+
+        /* 這個寫法是h2 底下的所有 p標籤都會吃到 */
+        h2  p{
+            color: blue;
+        }
+
+        /* 只有 h2 底下的 p 標籤才會吃到，若在下去就不會 */
+        h2 > p{
+            color: yellow;
+        }
+
+        h2 ~ h3{
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2 class="green">
+        0.說到功夫，因而現金，不代表分配，利益壓。
+        <p>
+            1.
+            雜誌標準情形然後幾次不喜歡也想，定義友。
+        </p>
+
+        <p>
+            2.
+            德國西方英國當然他還中港路走勢肌膚，由。
+        </p>
+
+        <ul>
+            <li>3.大連親自，畢竟結束。</li>
+            <li>
+                <p>4.大連親自，畢竟結束。</p>
+            </li>
+        </ul>
+    </h2>
+
+    <h2>
+        <div class="green">
+            5.基礎上方法怪物劇情不需要都能經過一年，類型答應收集女朋友競。
+        </div>
+
+        <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, impedit.
+        </h3>
+    </h2>
+
+    <h3>
+        真正論文同事男人數碼他們的有關瘋狂一次有所，我很付出追求寶寶是我思維上了硬盤戰爭高中，國務院很好網際快車，能不能都市意味着星座運行平台，經營許可證用於有關動物人類，策略嘉義往往發貼窗口備案實踐卻是彼此組合的確而且女朋友空氣，金錢回應發言有個觀察，實現工作。
+    </h3>
+</body>
+</html>

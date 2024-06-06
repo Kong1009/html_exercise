@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            background-clip 背景圖遮色
+
+            前綴字(前飾字) 針對瀏覽器
+                -webkit- Chrome、safri
+                -ms- IE
+                -o- opare
+
+        */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 100%;
+            height: 100vh;
+            font-size: 200px;
+            text-align: center;
+            font-weight: 900;
+            line-height: 100vh;
+            font-family: sans-serif;            
+            background-image: url(https://media.giphy.com/media/X05zlYGHHCe9kyGgkW/giphy.gif?cid=ecf05e472k1lx1v45g211py14lyware785ufvor3s6lppka3&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+            background-repeat: cover;
+            background-position: center;
+
+            /* 若只下background-clip沒反應就加上前綴字來對另瀏覽器 */
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        TEXT
+    </div>
+    
+</body>
+</html>

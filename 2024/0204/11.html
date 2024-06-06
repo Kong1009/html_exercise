@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* 
+        第n個元素 進行調整
+        nth-of-type(n)
+
+        3的倍數都會套用這個效果 
+
+        2n-1 會是1 3 5 7 9 
+
+        倒數第n個元素開始調整
+        nth-last-of-type(3n)
+        */
+        ul li:nth-of-type(2n-1) {
+            color: red;
+        }
+
+        /* 從後面開始計算 */
+        ul li:nth-last-of-type(3n){
+            color: blue;
+        }
+
+        h1:nth-child(1){
+            color: green;
+        }
+
+        p:nth-child(2){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+        <li>項目符號</li>
+    </ul>
+
+    <div>
+        <h1>h1</h1>
+        <p>p</p>
+    </div>
+</body>
+</html>

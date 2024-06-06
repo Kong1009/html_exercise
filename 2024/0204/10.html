@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            /* 文字顏色 */
+            color: darkblue;
+
+            /* 輸入框顏色 */
+            background-color: #DDDD;
+        }
+
+        
+        input::placeholder{
+            /* 文字說明顏色 */
+            color: darkred;
+        }
+
+        input:focus{
+            border: none;
+            background-color: red;
+            outline-offset: 5px;
+        }
+
+        input:disabled{
+            background-color: aqua;
+        }
+
+        /* 按鈕的disabled 內容調整 */
+        button:disabled{
+            background-color: #333;
+            border: 2px solid;
+            border-radius: 3px;
+            color: #fff;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <input type="text" placeholder="請輸入帳號">
+    <input type="text" placeholder="請輸入密碼" disabled>
+    <button type="button" disabled>清除</button>
+    <button type="button">送出</button>
+    
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        表單<form>
+            屬性:
+                action 連接後台網站
+                method 傳送方式
+        
+            輸入框 <input>
+                type屬性:
+                    text: 文字輸入框
+
+                    number 數值輸入框
+                        屬性:
+                            step 級距(假設設定為2 就是2 4 6...)
+
+                    password 密碼輸入框
+                    color 顏色檢色器
+                    range 滑桿                              
+                    email 
+                    url 網址
+                    tel 電話
+
+                    checkbox 複選方塊
+                    radio 單選方塊
+
+                    button 一般按鈕
+                    reset 清除按鈕
+                    submit 提交按鈕         
+                        
+                    屬性:
+                        placeholder: 提示字元
+                        required: 檢查輸入框是否有填寫(必填)
+                        readonly: 唯獨(不可修改)
+                        hidden: 隱藏
+                        maxlength 輸入最多字元
+                        minlength 輸入最少字元
+                        pattern 匹配格式 同python的 re
+                        min 最小值
+                        max 最大值
+                        checked 預設選項
+                        disabled 關閉功能
+
+                元素內行: 行內元素
+
+            button 按鈕
+                type屬性:
+                    button 一般按鈕
+                    reset 清除按鈕
+                    submit 提交按鈕  
+
+            select 下拉式選單
+                option 選項內容
+
+            元素內行: 行內元素
+
+
+            textarea 文字方塊
+     -->
+    <form action="#" method="get">
+        <input type="text" name="user" placeholder="請輸入..." required minlength="2" maxlength="5"><br>
+        <input type="text" value="https://google.com.tw" readonly><br>
+        <input type="text" value="testA" id="" hidden> <!-- 可以當層隱藏表單的內容(讓後端判斷是否為機器人) -->
+        
+        <input type="email" name="email" id="" placeholder="Email"><br>
+
+        <!-- [0]{1}[9]{1}[0-9]{8} 手機匹配格式 -->
+        <input type="tel" name="tel" pattern="[0]{1}[9]{1}[0-9]{8}" maxlength="10" minlength="7" placeholder="請輸入手機號碼"><br>
+
+
+        <input type="text" name="ID" pattern="[A-Z]{1}[0-1]{1}[0-9]{8}" maxlength="10" minlength="7" placeholder="身分證"><br>
+
+        <input type="url" name="weburl" placeholder="請輸入網址"><br>
+
+        <input type="color" name="chengcolor"><br>
+        <input type="range" min="12" max="50"><br>
+
+        <!-- 
+            type="number" 只能輸入數字
+            可能用在電商平台使用者最小數量為1 
+            但number是數字都可以包含負 所以要設定最小值1    
+        -->
+        <input type="number" name="num" min="1" value="1" step="12"><br>
+        <input type="file" name="" id=""><br>
+
+        <input type="date" name="" id=""><br>
+
+        <!-- 現在不在使用 -->
+        <input type="datetime" name="" id=""><br>
+
+        <!-- 替代上面的用法 -->
+        <input type="datetime-local" name="" id=""><br>
+
+        <input type="search" name="" id=""><br>
+
+        <!--
+            raido單選 
+                name要一樣不然選的時候會變成不同的選項的概念
+         -->
+         <!-- label for要指定id這樣就不需要點到圈圈 -->
+        <label for="boy">            
+            <input type="radio" name="sexy" id="boy" value="boy">boy<br>
+        </label>
+        <label for="girl">
+            <input type="radio" name="sexy" id="girl" value="girl">girl<br>
+        </label>
+
+        <br>
+
+        <!-- 複選 -->
+        <label for="red">
+            <input type="checkbox" name="color" id="red" value="red">red
+        </label>
+        <label for="blue">
+            <input type="checkbox" name="color" id="blue" value="blue">blue
+        </label>
+        <label for="green">
+            <input type="checkbox" name="color" id="green" value="green">green
+        </label>
+        <label for="yellow">
+            <input type="checkbox" name="color" id="yellow" value="yellow">yellow
+        </label>
+        <label for="orange">
+            <input type="checkbox" name="color" id="orange" value="orange">orange
+        </label>
+        <br>
+        
+        <label for="a10">
+            <input type="radio" name="num" id="a10" value="10" checked>非常滿意
+        </label>
+        <br>
+        <label for="a5">
+            <input type="radio" name="num" id="a5" value="5">滿意
+        </label>
+        <br>
+        <label for="a0">
+            <input type="radio" name="num" id="a0" value="0">普通滿意
+        </label>
+        <br>
+        <label for="a-5">
+            <input type="radio" name="num" id="a-5" value="-5">不滿意
+        </label>
+        <br>
+        <label for="a-10">
+            <input type="radio" name="num" id="a-10" value="-10">非常不滿意
+        </label>
+        <br>
+        <select name="" id="">
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="台南">台南</option>
+            <option value="高雄">高雄</option>
+        </select>
+        <br>
+        <textarea name="" id="" rows="50" cols="30" placeholder="內文..." maxlength="500"></textarea>
+        <br>
+        <input type="button" value="按我">
+        <input type="reset" value="清除">
+        <input type="submit" value="送出">
+        <br>
+        <button type="button" value="按我">按我</button>
+        <button type="reset" value="清除" disabled>清除</button>
+        <button type="submit">送出</button>
+    </form>
+    
+</body>
+</html>
+<script>
+    document.getElementById
+</script>

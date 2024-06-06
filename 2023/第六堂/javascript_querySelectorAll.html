@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="app">Hello</h1>
+    <h1 class="app">Hi</h1>
+    <h1 class="app">World</h1>
+</body>
+</html>
+<script>
+    /*
+        document.getElementsByTagName("標籤"); 獲取標籤內容
+        document.getElementsByClassName("Class名稱");
+        document.getElementsById("Id名稱");
+
+        
+        document.querySelectorAll("css樣式寫法"); 只有此可以使用forEach迴圈讀取
+    */
+
+    // let a = document.getElementsByTagName("h1");
+
+    // querySelectorAll(接css的樣式)
+    let a = document.querySelectorAll(".app");
+    // console.log(a[0].textContent);
+    for (const key of a) {
+        console.log(key.textContent);
+    }
+
+    // getElementsByTagName不可用此方法
+    a.forEach(function(data){
+        console.log(data.textContent);
+    })
+</script>

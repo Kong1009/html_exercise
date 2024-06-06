@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        文字框<input placeholder="文字提示" type="text"><br>
+        密碼框<input type="password" placeholder="disabled中" disabled><br>
+        數字框<input type="number" min="1"><br>
+        <input type="color" name="" id=""><br>
+        <input type="date" name="" id=""><br>
+
+        <strong>複選</strong>
+        <label for="boy">
+            <input type="radio" name="gender" id="boy" value="男生">男
+        </label>
+
+        <label for="girl">
+            <input type="radio" name="gender" id="girl" value="女生">女
+        </label>
+        <br>
+
+        <strong>複選</strong>
+
+        <label for="red">
+            <input type="checkbox" name="color[]" value="red" id="red">紅色
+        </label>
+
+        <label for="green">            
+            <input type="checkbox" name="color[]" value="green" id="green">綠色
+        </label>
+
+        <label for="blue">
+            <input type="checkbox" name="color[]" value="blue" id="blue">藍色
+        </label>    
+
+
+        <br>
+        <br>
+
+        <select name="address" id="">
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+            <option value="屏東">屏東</option>
+        </select>
+
+        <br>
+        <br>
+        <textarea name="" id="" cols="30" rows="5" maxlength="100" placeholder="最多100字"></textarea>
+
+
+
+
+        <br>
+
+        <button type="button" disabled>按鈕</button>
+        <button type="button">送出</button>
+        <button type="reset">清除</button>
+
+    </form>
+    
+</body>
+</html>

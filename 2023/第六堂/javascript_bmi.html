@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+
+        .box{
+            width: 300px;
+            padding: 1em;
+            margin:5em auto;
+            font-size: 20px;
+            background-color: antiquewhite;
+            border-radius: 10%;
+        }
+        h1{
+            text-align: center;
+        }
+        
+        .box input{
+            width: 100%;
+            font-size: 20px;
+            padding: 0.25em;
+            margin: 0.1em 0;
+            border-radius: 20%;
+
+        }
+
+        .box button{
+            width: 100%;
+            font-size: 20px;
+            padding: 0.25em;
+            margin: 0.1em 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>BMI檢測器</h1>
+        <input type="text" id="height" placeholder="身高">
+        <input type="text" id="weight" placeholder="體重">
+        <button id="btn">送出</button>
+        <h2 id="result"></h2>
+    </div>
+</body>
+</html>
+<script>
+    // BMI計算
+    let h = document.getElementById("height");
+    let w = document.getElementById("weight");
+    let x;
+    // 監聽button的動作
+    document.getElementById("btn").addEventListener("click", function(){
+        let bmi = Number(w.value) / (Number(h.value)/100) ** 2;
+        console.log(bmi);
+        if(isNaN(bmi)){
+            x = "不可空白";
+        }else if(bmi == 0 || bmi ==Infinity){
+            x = "身高體重不可為0";
+        }
+        else if(bmi < 18){
+            x = "BMI: "+Math.round(bmi * 10) / 10+" 過輕";
+        }else if(bmi < 28){
+            x = "BMI: "+Math.round(bmi * 10) / 10+" 標準";
+        }else if(bmi < 30){
+            x = "BMI: "+Math.round(bmi * 10) / 10+" 輕度過重";
+        }else{
+            x = "BMI: "+Math.round(bmi * 10) / 10+" 過重";
+        }
+        document.getElementById("result").textContent = x;
+        h.value = "";
+        w.value = "";
+    })
+</script>

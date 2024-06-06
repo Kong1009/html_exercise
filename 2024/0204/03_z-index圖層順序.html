@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            圖層順序: z-index
+                z-index: 1;
+                1.程式越下面的，圖層會在最上面
+                2.值越大圖層越上層
+                3.值相同，則依照程式碼的順序越下面越上層
+
+            
+        */
+        div{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+
+        }
+
+        .app{
+            background-color: red;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .bpp{
+            background-color: green;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+        .cpp{
+            background-color: blue;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app"></div>
+    <div class="bpp"></div>
+    <div class="cpp"></div>
+    
+</body>
+</html>

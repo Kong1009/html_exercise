@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            padding 內距
+            margin 外距
+            box-sizing 區塊大小設定方式
+        */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a{
+            /* inherit繼承父系元素的顏色 */
+            color: inherit;
+            text-decoration: none;
+        }
+
+        menu{
+            width: 100%;
+            height: 80px;
+            box-shadow: 2px 2px 2px gray;
+            line-height: 80px;
+
+            /* 為了關閉區塊元素的間距 */
+            font-size: 0;
+
+        }
+        
+        menu #logo{
+            width: 30%;
+            text-align: center;
+            display: inline-block;
+            background-color: aquamarine;
+            font-size: 16px;
+        }
+        
+        menu ul{
+            width: 70%;
+            display: inline-block;
+            list-style: none;
+            font-size: 16px;
+            /* background-color:blueviolet; */
+            text-align: right;
+            
+        }
+
+        menu ul li{
+            display: inline-block;
+        }
+
+        menu ul li a{
+            display: block;
+            padding: 0 1em;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <menu>
+        <div id="logo"><h1>連城LOGO</h1></div>
+        <ul>
+            <li><a href="#">回到首頁</a></li>
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">產品內容</a></li>
+            <li><a href="#">服務項目</a></li>
+            <li><a href="#">聯絡我們</a></li>
+            
+        </ul>
+    </menu>
+    
+</body>
+</html>

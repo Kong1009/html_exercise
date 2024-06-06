@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        參考網址 https://bennettfeely.com/clippy/
+
+            clip-path 剪裁遮色片
+                clip-path: plolygon() ; #多邊形
+
+            animation 動畫
+                animation: name duration timing-function delay iteration-count direction fill-mode;
+                    name 執行的動畫名稱
+                    duration 動畫期間
+                    timing-function 動畫曲線
+                    delay 動畫延遲
+                    iteration-count 動畫次數
+                    direction 反向動畫
+                    fill-mode 最後畫面
+        */
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 250px;
+            height: 250px;
+            border: 15px solid green;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50vh - 125px);
+            left: calc(50% - 125px);
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            animation: loading 50s linear infinite;
+        }
+
+        /* 定義動畫 */
+        @keyframes loading{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(3600deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

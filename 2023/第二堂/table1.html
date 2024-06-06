@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr{
+            background-color: #DDDDDD;
+        }
+
+        table tr:nth-of-type(2n){
+            background-color: #dddddd29;
+        }
+
+        table td, th{
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        表格<table>
+            cellspacing: 儲存格內間距
+            cellpadding: 儲存格內內距
+            colspan: 合併水平欄位
+            rowspan: 合併垂直欄位
+
+        元素類型: 區塊元素
+
+     -->
+
+    <!-- <table cellspacing="0">
+        <tr>
+            <td>姓名</td>
+            <td>性別</td>
+            <td>電話</td>
+            <td>地址</td>
+        </tr>
+
+        <tr>
+            <td>蔡依林</td>
+            <td>女生</td>
+            <td>09123456789</td>
+            <td>台北市</td>
+        </tr>
+        <tr>
+            <td>蔡依林</td>
+            <td>女生</td>
+            <td>09123456789</td>
+            <td>台北市</td>
+        </tr>
+        <tr>
+            <td>蔡依林</td>
+            <td>女生</td>
+            <td>09123456789</td>
+            <td>台北市</td>
+        </tr>
+        <tr>
+            <td>蔡依林</td>
+            <td>女生</td>
+            <td>09123456789</td>
+            <td>台北市</td>
+        </tr>
+        <tr>
+            <td>蔡依林</td>
+            <td>女生</td>
+            <td>09123456789</td>
+            <td>台北市</td>
+        </tr>
+        <tr>
+            <td>蔡依林</td>
+            <td>女生</td>
+            <td>09123456789</td>
+            <td>台北市</td>
+        </tr>
+    </table>
+    <br> -->
+
+    <table>
+        <!-- 若把tfoot放到最上面，在頁面中依然都是在最下方 -->
+        <!-- 表格的 thead 表格的最上方 -->
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性別</th>
+                <th>電話</th>
+                <th>地址</th>
+            </tr>
+        </thead>
+
+        <!-- 表格的tbody 表格的中間 -->
+        <tbody>
+            <tr>
+                <td>蔡依林</td>
+                <td>女生</td>
+                <td>09123456789</td>
+                <td>台北市</td>
+            </tr>
+            <tr>
+                <td>蔡依林</td>
+                <td>女生</td>
+                <td>09123456789</td>
+                <td>台北市</td>
+            </tr>
+        </tbody>
+
+        <!-- 表格的tfoot 表格的最下方 -->
+        <tfoot>
+            <tr>
+                <td colspan="4">lcc製作</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>

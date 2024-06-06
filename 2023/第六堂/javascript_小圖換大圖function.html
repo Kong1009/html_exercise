@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            vertical-align: bottom;
+        }
+        .box{
+            width: 800px;
+            margin: 1em auto;
+        }
+
+        .box #big{
+            width: 100%;
+        }
+
+        .box .item{
+            width: calc(100% / 4 - 4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://picsum.photos/id/237/800/600" alt="" id="big">
+        <img src="https://picsum.photos/id/237/800/400" alt="" class="item" onclick="change('picsum.photos/id/237/800/400')">
+        <img src="https://picsum.photos/id/137/800/400" alt="" class="item" onclick="change('picsum.photos/id/137/800/400')">
+        <img src="https://picsum.photos/id/37/800/400" alt="" class="item" onclick="change('picsum.photos/id/37/800/400')">
+        <img src="https://picsum.photos/id/43/800/400" alt="" class="item" onclick="change('picsum.photos/id/43/800/400')">
+        
+    </div>
+</body>
+</html>
+
+<script>
+    function change(data){
+        document.getElementById("big").src = "https://"+data;
+    }
+</script>

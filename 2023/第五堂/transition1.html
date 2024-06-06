@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            transition 轉場
+                transition: 轉場屬性 轉場期間 延遲時間 緩動函數;  # 只有轉場跟延遲時間不可交換
+
+        */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: antiquewhite;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 2.5em;
+        }
+
+        header ul{
+            list-style: none;
+            text-align: right;
+        }
+
+        header ul li{
+            display: inline-block;
+            padding: 0 0.5em;
+            transition: all 500ms ease;
+        }
+
+        header ul li:hover{
+            background-color: darkblue;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>SERVICE</li>
+            <li>CONTACT</li>
+        </ul>
+    </header>
+    
+</body>
+</html>

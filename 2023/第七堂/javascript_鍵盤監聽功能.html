@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鍵盤監聽教學</title>
+</head>
+<body>
+    <input type="text" id="user">
+</body>
+</html>
+<script>
+    /*
+        鍵盤監聽
+            keydown     按下未放開
+            keyup       按下放開時
+            keypress    按下+放開; 讀不到一些功能鍵
+
+            鍵盤值
+                e.code 鍵盤完整名稱
+                e.key 按鍵名稱
+                e.keyCode 按鍵數值
+        
+        參考網站
+            https://www.ifreesite.com/typing-keycode.htm
+
+        
+    */
+    let user = document.getElementById("user");
+    user.addEventListener("keypress", function(e){
+        console.log(e);
+        console.log(`鍵盤的code: ${e.code}`);
+        console.log(`鍵盤的key: ${e.key}`);
+        console.log(`鍵盤的keyCode: ${e.keyCode}`);
+    })
+</script>

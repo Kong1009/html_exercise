@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+</body>
+</html>
+<script>
+    let month = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]
+    let dayarray = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+
+
+    // document.write(`${y} / ${month[m]} / ${date} ${dayarray[day]}`);
+    // document.write(`${h}: ${mins}: ${s}`);
+    let p = document.getElementsByTagName("p")[0];
+
+    // 循環函數
+    setInterval(() => {
+        let d = new Date();
+        let y = d.getFullYear();
+        let m = d.getMonth();
+        let date = d.getDate();
+        let day = d.getDay();
+        let h = d.getHours();
+        let mins = d.getMinutes();
+        let s = d.getSeconds();
+
+        let ss;
+        if(s < 10){
+            ss = "0"+s;
+        }
+        p.textContent = `${y} / ${m+1} / ${date} / ${dayarray[day]} ${h}:${mins}: ${s<10 ? "0"+s : s }`;
+        // p.textContent = `${y} / ${m+1} / ${date} / ${dayarray[day]} ${h}:${mins}: ${s}`;
+        
+    });
+
+    console.log(d);
+    console.log(y);
+</script>

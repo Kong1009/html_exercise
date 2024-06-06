@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            背景圖片重複排列: background-repeat
+                repeat:預設，重複排列
+                no-repeat:不重複排列
+                repeat-x: 水平重複排列
+                repeat-y: 垂直重複排列
+
+            背景圖片在區塊內的位置: background-position
+                水平排列: left、right、數值+單位
+                垂直排列: top、bottom、數值+單位
+
+            背景圖片大小: background-size
+                auto: 預設
+                contain: 圖片等比例縮放、填滿框架(不滿的地方會有空白)
+                cover: 圖片等比例縮放，填滿框架且會超出範圍
+        */
+        header{
+            width: 500px;
+            height: 650px;
+
+            background-color: beige;
+            background-image: url(https://picsum.photos/800/600);
+
+            background-repeat: inherit;
+            background-repeat: no-repeat;
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+
+            background-position: center;
+            background-position: center top;
+            background-position: center 50px;
+            background-position: center bottom;
+
+            background-size: contain;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    
+</body>
+</html>

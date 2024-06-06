@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            width: 5em;
+            height: 5em;
+            background-color: #000;
+            line-height: 5em;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Hello
+    </h1>
+    <button type="button" id="btn">ADD</button>
+</body>
+</html>
+<script>
+    /*
+        addEventListener 監聽
+            click 滑鼠按下(按下及放開都完成才算)
+            mousedown   滑鼠按下(只有桌機可以)
+            mouseup     滑鼠放開(只有桌機可以)
+            mouseover   滑鼠移入(只有桌機可以)
+            mouseout    滑鼠移出(只有桌機可以)
+            mousemove   滑鼠移動(只有桌機可以)
+
+            change 更換
+    */
+    let x = 32;
+    let h1 = document.getElementsByTagName("h1")[0]
+    h1.addEventListener("click", function(){
+        this.style.fontSize = x++ + "px";
+    })
+
+    h1.addEventListener("mousedown", function(){
+        this.style.backgroundColor = "red";
+    })
+    h1.addEventListener("mouseup", function(){
+        this.style.backgroundColor = "black";
+    })
+    h1.addEventListener("mouseover", function(){
+        this.style.backgroundColor = "green";
+    })
+    h1.addEventListener("mouseout", function(){
+        this.style.backgroundColor = "blue";
+    })
+
+    btn.addEventListener("mousemove", function(){
+        h1.style.fontSize = x-- + "px";
+    })
+</script>

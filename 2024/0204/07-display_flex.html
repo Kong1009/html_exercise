@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            彈性盒子: display: flex
+                1.彈性盒子，屬性必須寫在父系元素身上
+                2.對齊，無法使用text-align
+
+            彈性盒子水平對齊: justify-content
+                center: 對齊中間
+                flex-start: 對齊盒子的起始處
+                flex-end: 對齊盒子的結束處
+                space-around: 平均對齊，會產生間距
+                space-between: 平均對齊，會產生間距，且會貼齊邊界
+
+            彈性盒子-換行: flex-wrap
+                nowrap: 不換行
+                warp: 換行
+                wrap-reverse: 反向換行
+
+            彈性盒子垂直對齊: align-content
+                # 必須要有垂直距離才會有效果
+                center: 對齊中間
+                flex-start: 對齊盒子的起始處
+                flex-end: 對齊盒子的結束處
+                space-around: 平均對齊，會產生間距，但必須是垂直排列
+                space-between: 平均對齊，會產生間距，且會貼齊邊界，且必須是垂直排列
+
+        */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            widows: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: space-between;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            flex-wrap: wrap-reverse;
+            flex-wrap: wrap;
+
+            align-content: center;
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: space-between;
+        }
+
+        ul li{
+            width: 200px;
+            height: 300px;
+            list-style: none;
+            background-color: antiquewhite;
+            /* display: inline-block; */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            偽元素
+                以a標籤為例
+                a:link      #原始連結
+                a:hover     #滑鼠移入時
+                a:active    #滑鼠點擊時
+                a:visited   #連結點擊後
+                a::before   #a標籤內容之前
+                a::after    #a標籤內容之後
+
+                a:nth-of-type(2) #指定第n個
+                a:last-of-type(1) #從後面往前數
+
+                :disabled   #針對關閉時的標籤設定
+                :focus      #針對input被選擇後的樣式
+
+
+                input: focus    # 針對輸入邊框
+                    outline
+                    outline-width
+                    outline-style
+                    outline-color
+
+                input::placeholder # 針對input的提示文字
+
+                :root # 類似物件導向的概念
+
+
+        */
+        :root{
+            --btnBlue: #4657d6;
+            --btnGreen: #8bea48;
+            --btnRed: #eb2d2d;
+        }
+
+        a{
+            font-size: 50px;
+            text-decoration: none;
+        }
+        
+
+
+        /* 連結 */
+        a:link{
+            color: green;
+        }
+
+        a:hover{
+            color: blue;
+        }
+
+        /* 點擊時 */
+        a:active{
+            color: red;
+        }
+
+        /* 點擊過後 */
+        a:visited{
+            color: orange;
+        }
+
+        a::before{
+            content: "Befor+"
+        }
+
+        a::after{
+            content: "+After"
+        }
+
+        /* 一樣是後蓋前若想要上面的功能就拉到上面 */
+        a:nth-of-type(2){
+            color: blue;
+        }
+
+        a:last-of-type(1){
+            color: green;
+        }
+
+        /* 設定按鈕為disabled狀態時的css */
+        button:disabled{
+            color: rgb(161, 216, 169);
+            background-color: aquamarine;
+            border-color:rgb(186, 227, 192)
+        }
+
+        input{
+            border-color: #e87df0
+        }
+
+        input:focus{
+            background-color: #dea4e2;
+
+            /* for input使用的 */
+            outline-color: #d920e6;
+        }
+
+        input::placeholder{
+            color: rgb(95, 175, 224)
+        }
+
+        div{
+            color: var(--btnBlue);
+            color: var(--btnRed);
+        }
+
+        .text-pink{
+            color: rgb(227, 167, 177)
+        }
+    </style>
+</head>
+<body>
+
+
+    <a href="#">ABCD</a>
+    <a href="#">ABCD</a>
+    <br>
+    <button type="button" disabled>按鈕</button>
+    <input type="text" placeholder="請輸入...">
+
+    <div>ABCD</div>
+    <div>EFGH</div>
+    <div class="text-pink">EFGH123</div>
+</body>
+</html>

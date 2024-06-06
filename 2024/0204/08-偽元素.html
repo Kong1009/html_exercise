@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            偽元素:
+                :link 超連結預設
+                :visited 連結點過後的顏色
+                :hover 滑鼠移入時的顏色
+                :active 滑鼠按下時的顏色
+        */
+        a{
+            font-size: 140px;
+        }
+
+        a:link{
+            color: chartreuse;
+            font-size: 200px;
+        }
+
+        /* 超連結點擊過後 */
+        a:visited{
+            color: gold;
+        }
+        
+        /* 滑鼠移過 */
+        a:hover{
+            color: red;
+            font-size: 300px;
+        }
+
+        /* 滑鼠點擊 */
+        a:active{
+            color: green;
+        }
+
+        </style>
+</head>
+<body>
+
+    <a href="https://www.yahoo.com.tw">yahoo</a>
+    <a href="https://www.google.com.tw">Google</a>
+    
+</body>
+</html>

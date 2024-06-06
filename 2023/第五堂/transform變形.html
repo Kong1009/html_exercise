@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            transform 變形
+                scale縮放
+                    transform: scale(0.5);  #縮放的倍數
+                    transform: scalex(0.5); #水平縮放的倍數
+                    transform: scaley(0.5); #垂直縮放的倍數
+                    transform: scaleZ(0.5) scaleY(0.3); #
+                rotae選轉
+                    transform: rotate(180deg);  #翻轉
+                    transform: rotatex(180deg); #垂直翻轉
+                    transform: rotatey(180deg); #水平翻轉
+                    transform: rotatez(180deg); #選轉
+                skew傾斜
+                    transform: skew(30deg);     #傾斜度數deg
+                    transform: skewx(30deg);    #傾斜度數deg
+                    transform: skewy(30deg);    #傾斜度數deg
+                translatex移動
+                    transform: translatex(100px);
+                    transform: translatey(100px);
+                    transform: translatez(100px);
+        */  
+
+        div{
+
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            margin: calc(50vh - 250px) auto 0;
+            transition: all 1000ms ease;
+            font-size: 50px;
+            font-weight: 900;
+            text-align: center;
+        }
+        
+        body:hover div{
+            transform: scale(0.5);
+            transform: scalex(0.5);
+            transform: scaley(0.5);
+            transform: scaleZ(0.5) scaleY(0.3);
+
+            transform: rotate(180deg);
+            transform: rotatex(180deg);
+            transform: rotatey(180deg);
+            transform: rotatez(360deg);
+
+            transform: skew(30deg);
+            transform: skewx(30deg);
+            transform: skewy(30deg);
+
+            transform: translatex(100px);
+            transform: translatey(100px);
+            transform: translatez(100px);
+        }
+    </style>
+</head>
+<body>
+    <div>ABC</div>
+</body>
+</html>

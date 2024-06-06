@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            z-index 圖層順序
+                數字越大，圖層越前面1~100
+        */
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 20px;
+        }
+
+        .red{
+            background-color: red;
+            top:20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .blue{
+            background-color: blue;
+            top: 80px;
+            left: 80px;
+            z-index: 1;
+        }
+        .green{
+            background-color:green;
+            top: 160px;
+            left: 160px;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+    
+</body>
+</html>

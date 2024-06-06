@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 內嵌式CSS -->
+    <style>
+        /* 
+            CSS階層樣式表，主要修飾或美化HTML內容
+            CSS安裝
+                1.外連式：連結其他網頁的 .css檔案，連接資料夾內 .css檔案
+                2.內嵌式：使用style標籤，將內容寫在立面
+                3.行內式：寫在標籤元素裡面
+
+            CSS架構
+                選擇器(屬性:值)
+
+            CSS權重
+                基本上，相同元素，相同屬性，不同值會後蓋前
+                1.標籤Element 1point
+                2.類別Class   10point
+                3.選擇器id    100point
+                4.行內式      1000point  
+                5.!important  10000point
+        */
+        #app1, #app2{
+            color: green;
+        }
+        .item{
+            color: red;
+        }
+
+        p{
+            color: blue!important;
+        }
+    </style>
+</head>
+<body>
+    <p>1重量硬盤概念神話冠。</p>
+    <p class="item">2重量硬盤概念神話冠。</p>
+    <p class="item" id="app1">3重量硬盤概念神話冠。</p>
+    <p class="item" id="app2" style="color: indigo;">4重量硬盤概念神話冠。</p>
+    
+    
+</body>
+</html>

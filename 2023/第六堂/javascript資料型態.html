@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    /* 
+        基本資料型態
+            數值型態(number): 正整數、負整數、浮點數(小數點)
+            文字型態(String) 中文、英文、數字
+            布林代數(Boolean) true、false
+            未定義(undifined) 未定義資料內容
+            陣列、物件: Array、Object
+
+        檢查
+            內容: console.log()
+            型態: typeof()
+
+        變數設定
+            var 全域變數
+            let 區域變數
+            const 常數
+
+        變數命名方式
+            1. 第一個字不可為數字
+            2. 開頭符號只能 _、$
+            3. 英文大小寫有區別
+
+    */
+    let a = 3;
+    let b = 5;
+    let c = "3"
+    // console.log(a + b);
+    // console.log(a - b);
+    // console.log(a * b);
+    // console.log(a / b);
+    // console.log(a % b);
+
+    // a++ 先執行程式內容再+1 所以顯示還是3 但a已經是4
+    console.log(a++);
+
+    // ++a 先遞增+1 在顯示 所以是5
+    console.log(++a);
+
+
+    console.log(a--);
+    console.log(--a);
+
+    // a的b次方
+    console.log(a**b); 
+
+    // 比對;回傳bool
+    console.log(a > b);
+
+    // 比對內容是否相同
+    console.log(a == b);
+    console.log(a === b);
+
+    // 比對"內容"跟"型態"是否都一樣
+    console.log(a === c);
+
+    
+    console.log(a | b);
+    console.log(a & b);
+    console.log(a && b);
+
+    console.log(typeof(a));
+    console.log(typeof(c));
+
+    // 轉型
+    a = String(a);
+    console.log(typeof(a));
+
+
+</script>

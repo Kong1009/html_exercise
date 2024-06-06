@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let names = ["gary", "mary", "hary", "hery", "jary","john", "alice"]
+    console.log(names[0])
+    for (name in names){
+        console.log(names[name]);
+        // 寫到網頁上
+        document.write("姓名: "+names[name]+"<br>");
+    }
+    
+    // const _ of _ # of 讀值
+    for(const x of names){
+        console.log("For of:" + x);
+    }
+
+    // const _ in _ # in 讀索引值index
+    for(const key in names){
+        console.log("ForIn:"+key)
+    }
+
+    // foreach針對陣列迴圈
+    names.forEach(function(e){
+        console.log("陣列迴圈"+e);
+    })
+
+</script>

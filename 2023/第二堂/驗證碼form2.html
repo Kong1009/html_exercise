@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h4{
+            display: inline-block;
+            font-size: 22px;
+            padding:0 1.5em;
+            margin: 0.5em;
+            border: 1px solid #888;
+            border-radius: 6px;
+            background-image: linear-gradient(45deg, red, green, blue, skyblue, purple);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <input type="text" maxlength="4">
+        <h4></h4>
+        <button type="button" onclick="window.location.reload()">更新驗證碼</button>
+        <button type="submit">送出</button>
+        <h5></h5>
+    </form>
+    
+</body>
+</html>
+<script>
+    // by ChatGPT
+    // function generateRandomNumber() {
+    //         let x;
+
+    //         do {
+    //             x = Math.floor(Math.random() * 10000);
+    //         } while (String(x).length < 4);
+
+    //         document.getElementsByTagName("h4")[0].textContent = x;
+    //         console.log(String(x).length);
+    //         console.log(x)
+    //     }
+
+    //     generateRandomNumber();
+
+    let x = Math.floor(Math.random() * 10000);
+    document.getElementsByTagName("h4")[0].textContent = x;
+    console.log(String(x).length);
+    // 這裡的判斷有問題(需要調整)
+    if (String(x) < 1000){
+        x = Math.floor(Math.random() * 10000);
+    };
+    document.getElementsByTagName("button")[1].addEventListener("click", function(){
+        let y = document.getElementsByTagName("input")[0];
+        if ( x == Number(y.value)){
+            document.getElementsByTagName("h5")[0].textContent = "驗證成功";
+        }else{
+            document.getElementsByTagName("h5")[0].textContent = "輸入錯誤";
+        }
+        y.value=""
+    });
+    // console.log(x)
+</script>
