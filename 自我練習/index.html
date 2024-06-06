@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: inherit;
+            list-style: none;
+        }
+
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        header{
+            background-color: antiquewhite;
+            width: 80%;
+            height: 80px;
+            margin: auto;
+            position: relative;
+        }
+
+        header #logo{
+            
+            position: absolute;
+            background-color: yellowgreen;
+            /* height: 80px; */
+            line-height: 80px;
+            font-size: 2em;
+            width: 20%;
+            top: 0;
+            left: 0;
+        }
+        header menu{
+            width: 80%;
+            text-align: right;
+        }
+        menu ul{
+            
+            text-align: right;
+        }
+
+        menu ul li{
+            display: inline-block;
+            background-color: aqua;
+            font-size: 2em;
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex">
+        <div id="logo">
+            LOGO
+        </div>
+
+        <menu class="flex">
+            <ul>
+                <li>link</li>
+                <li>link</li>
+                <li>link</li>                
+                <li>link</li>                
+                <li>link</li>                
+            </ul>
+        </menu>
+    </header>
+    
+</body>
+</html>
