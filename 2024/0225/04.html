@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 800px;
+            margin: 3em auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box img{
+            width: 100%;
+        }
+
+        .box .item{
+            width: calc(100% / 4);
+        }
+        
+        .box .item img{
+            filter: brightness(0.5);
+        }
+
+        .box .item .small.show{
+            filter: brightness(1);
+            border: 2px solid red;
+        }
+
+        .box .item .small:hover{
+            filter: brightness(1);
+            transition: all 500ms linear;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://picsum.photos/id/237/800/600" alt="" id="big">
+        <div class="item">
+            <img src="https://picsum.photos/id/237/800/600" alt="" class="small show">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/id/33/800/600" alt="" class="small">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/id/44/800/600" alt="" class="small">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/id/55/800/600" alt="" class="small">
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let smalls = document.getElementsByClassName("small");
+    let big = document.getElementById("big");
+    for (const small of smalls) {
+        small.addEventListener("click", function(){
+            for (const s of smalls) {
+                s.setAttribute("class", "small")
+            }
+            big.setAttribute("src", this.getAttribute("src"));
+            this.setAttribute("class", "small show");
+        })
+    }
+</script>

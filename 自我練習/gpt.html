@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #theme {
+            width: 100%;
+            height: calc(100vh - 100%);
+            background-color: var(--alpha);
+            position: relative;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+            min-height: 450px;
+            max-height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide .img {
+            width: 100%;
+            height: 80%;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(100%);
+            animation: sliding 25s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .push {
+            width: 90%;
+            max-width: 600px;
+            padding: 1em;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            /* transform: scale(0.5); */
+            transform-origin: center;
+            transition: transform 0.5s;
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+            
+
+        }
+
+        .slide .img:nth-of-type(1) {
+            background-image: url(https://picsum.photos/1200/1200?random=1);
+        }
+        .slide .img:nth-of-type(2) {
+            background-image: url(https://picsum.photos/1200/1200?random=2);
+            animation-delay: 5s;
+        }
+        .slide .img:nth-of-type(3) {
+            background-image: url(https://picsum.photos/1200/1200?random=3);
+            animation-delay: 10s;
+        }
+        .slide .img:nth-of-type(4) {
+            background-image: url(https://picsum.photos/1200/1200?random=4);
+            animation-delay: 15s;
+        }
+        .slide .img:nth-of-type(5) {
+            background-image: url(https://picsum.photos/1200/1200?random=5);
+            animation-delay: 20s;
+        }
+
+        @keyframes sliding {
+            0% {
+                transform: translateX(100%);
+                z-index: 6;
+            }
+            4% {
+                transform: translateX(0);
+                z-index: 6;
+            }
+            20% {
+                transform: translateX(0);
+                z-index: 6;
+            }
+            24% {
+                transform: translateX(-100%);
+                z-index: 6;
+            }
+            25% {
+                transform: translateX(-100%);
+                z-index: 1;
+            }
+        }
+
+        .img:hover .push {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="theme">
+        <div class="slide">
+            <div class="img">
+                <div class="push">
+                    <h2>標題1</h2>
+                    <p>參考具備一句話世紀醫學下降加快，監督豐。</p>
+                    <a href="#" class="btn-theme">MORE</a>
+                </div>
+            </div>
+            <div class="img">
+                <div class="push">
+                    <h2>標題2</h2>
+                    <p>參考具備一句話世紀醫學下降加快，監督豐。</p>
+                    <a href="#" class="btn-theme">MORE</a>
+                </div>
+            </div>
+            <div class="img">
+                <div class="push">
+                    <h2>標題3</h2>
+                    <p>參考具備一句話世紀醫學下降加快，監督豐。</p>
+                    <a href="#" class="btn-theme">MORE</a>
+                </div>
+            </div>
+            <div class="img">
+                <div class="push">
+                    <h2>標題4</h2>
+                    <p>參考具備一句話世紀醫學下降加快，監督豐。</p>
+                    <a href="#" class="btn-theme">MORE</a>
+                </div>
+            </div>
+            <div class="img">
+                <div class="push">
+                    <h2>標題5</h2>
+                    <p>參考具備一句話世紀醫學下降加快，監督豐。</p>
+                    <a href="#" class="btn-theme">MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

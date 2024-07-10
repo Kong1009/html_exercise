@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let a = [1, 2, 3, "HTML", "CSS", "JavaScript"]
+    // 一般撈值的用法
+    console.log(a[1]);
+
+
+    console.log("-----------");
+    // 基礎 for 迴圈撈值
+    for(i = 0; i < 5; i ++){
+        console.log(a[i]);
+    }
+
+    // 進階 注意中間要 i 小於 a的長度不然會變成無窮迴圈
+    for(i = 0; i < a.length; i++){
+        console.log(a[i]);
+    }
+</script>

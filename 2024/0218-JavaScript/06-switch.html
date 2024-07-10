@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // case中的內容需與要比對的內容一樣
+    let x = 10;    
+    switch(x){
+        case 0: console.log("目前是 0");break
+        case 10: console.log("目前是 10");break
+        case 20: console.log("目前是 20");break
+        case 30: console.log("目前是 30");break
+        default: console.log("找不到內容");
+    }
+    switch(true){
+        case x < 0: console.log("目前是 0");break
+        case x < 10: console.log("目前是 10");break
+        case x < 20: console.log("目前是 20");break
+        case x < 30: console.log("目前是 30");break
+        default: console.log("找不到內容");
+    }
+
+    let h = 180;
+    let w = 50;
+    let bmi = w / (h / 100) ** 2;
+
+    switch(true){
+        case bmi < 18: console.log("過輕");break
+        case bmi < 24: console.log("標準");break
+        case bmi < 28: console.log("過重");break
+        case bmi < 30: console.log("輕度肥胖");break
+        case bmi < 34: console.log("重度肥胖");break
+        default: console.log("找不到內容");
+    }
+</script>

@@ -6,60 +6,118 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="#">
-        文字框<input placeholder="文字提示" type="text"><br>
-        密碼框<input type="password" placeholder="disabled中" disabled><br>
-        數字框<input type="number" min="1"><br>
-        <input type="color" name="" id=""><br>
-        <input type="date" name="" id=""><br>
+    <!-- 
+        表單 form
+            屬性
+                action 連接後台網址
+                method 傳送方法
+                    get
+                    post
 
-        <strong>複選</strong>
+            元素類型: 區塊元素
+        
+            輸入框 input
+                屬性
+                    type: 種類
+                    placeholder 輸入框內提示文字
+                    required 必塡
+                    name 元素名稱(主要給後台使用)
+                    id 元素名稱; 主要給JavaScript
+                    class 元素名稱; 主要給CSS
+                
+                type
+                    text: 文字輸入框
+                    password 密碼輸入框
+                    number 數字輸入框
+                        max 最大值
+                        min 最小值
+                        step 間距
+
+                    date 日期
+                    color 顏色檢色器
+                    email E-mail
+                    url 網址
+                    tel 電話
+                    radio 單選按鈕，name名稱必須相同
+                    checkbox 核取方塊，name需跟後台溝通，通常使用陣列[]
+                    range 滑桿
+                    search 搜尋框
+                    file 上傳檔案
+                
+                元素類型: 行內元素
+
+            按鈕 button
+                type
+                    submit 送出
+                    reset  清除
+                    button 按鈕
+
+            標籤 label
+                屬性
+                    for 針對id名稱
+
+            下拉選單 select、option
+
+            多行文字輸入框 textarea
+                屬性
+                    cols 欄位
+                    rows 列位
+    -->
+    <form action="#" method="get">
+        <input type="text" name="user" id="user" placeholder="請輸入帳號">
+        <input type="password" name="pwd" placeholder="請輸入密碼">
+        <input type="number" name="" id="" min="0" max="20" step="2" placeholder="請輸入數量">
+        <input type="color" name="" id="">
+        <input type="date" name="" id="">
+        <input type="email" name="" id="">
+        <input type="url" name="" id="">
+        <input type="tel" name="" id="">
+
+
         <label for="boy">
-            <input type="radio" name="gender" id="boy" value="男生">男
+            <input type="radio" name="gender" id="boy" value="boy">男生
         </label>
 
         <label for="girl">
-            <input type="radio" name="gender" id="girl" value="女生">女
+            <input type="radio" name="gender" id="girl" value="girl">女生
         </label>
         <br>
-
-        <strong>複選</strong>
-
         <label for="red">
-            <input type="checkbox" name="color[]" value="red" id="red">紅色
+            <input type="checkbox" name="color[]" id="red" value="red">紅色
         </label>
-
-        <label for="green">            
-            <input type="checkbox" name="color[]" value="green" id="green">綠色
+        <label for="grenn">
+            <input type="checkbox" name="color[]" id="grenn" value="grenn">綠色
         </label>
-
+        <label for="yellow">
+            <input type="checkbox" name="color[]" id="yellow" value="yellow">黃色
+        </label>
         <label for="blue">
-            <input type="checkbox" name="color[]" value="blue" id="blue">藍色
-        </label>    
-
-
+            <input type="checkbox" name="color[]" id="blue" value="blue">藍色
+        </label>
         <br>
+        <input type="range" name="" id="" value="8" min="0" max="10">
+        <input type="search" name="" id="">
         <br>
-
+        
         <select name="address" id="">
             <option value="台北">台北</option>
             <option value="台中">台中</option>
+            <option value="台南">台南</option>
             <option value="高雄">高雄</option>
-            <option value="屏東">屏東</option>
+
         </select>
 
         <br>
+        <textarea name="" id="" cols="30" rows="20" placeholder="請輸入...最多50字" maxlength="50"></textarea>
         <br>
-        <textarea name="" id="" cols="30" rows="5" maxlength="100" placeholder="最多100字"></textarea>
-
-
-
-
+        <input type="button" value="按鈕">
+        <input type="reset" value="清除">
+        <input type="submit" value="送出">
         <br>
+        <button type="submit">送出</button>
+        <button type="reset" disabled>清除</button>
+        <button type="button">按鈕</button>
 
-        <button type="button" disabled>按鈕</button>
-        <button type="button">送出</button>
-        <button type="reset">清除</button>
 
     </form>
     

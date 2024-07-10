@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>終極密碼~~~~~~~</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        .box{            
+            width: 300px;
+            padding:1em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2em auto;
+            background-color: antiquewhite;            
+            font-family: sans-serif;
+            font-weight: 900;
+        }
+
+        .box h1{
+            padding: 0.5em 0;
+        }
+
+        .box input, .box button{            
+            font-size: 20px;
+            padding: 0.25em 0; 
+            text-align: center;
+            margin: 0.25em 0;
+        }
+
+        .box input{
+            width: 100%;
+        }
+
+        .box button{
+            width: 50%;
+        }
+
+        .box ul{
+            width: 100%;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>終極密碼</h1>
+        <input type="text" id="user" placeholder="請輸入兩位數"  maxlength="2" autofocus>
+        <button type="button" id="reset" disabled>再玩一次</button>
+        <button type="button" id="btn">提交</button>
+
+        <ul>
+
+        </ul>
+
+        <span></span>
+    </div>
+</body>
+</html>
+
+<script>
+    let user = document.getElementById("user");
+    let reset = document.getElementById("reset");
+    let btn = document.getElementById("btn");
+    let ul = document.getElementsByTagName("ul")[0];
+    let min = 0;
+    let max = 100;
+    let count = 0;
+    let msg;
+    let sp = document.getElementsByTagName("span")[0];
+    
+
+    // 亂數產生密碼
+    let cpu;
+    randomCPU();
+    function randomCPU(){
+        cpu = Math.ceil(Math.random() * 99);
+        if (cpu <= 0){
+            randomCPU();
+        }
+    }
+    console.log(`cpu: ${cpu}`);
+
+    user.addEventListener("keyup", function(e){
+        if (e.keyCode == 13){
+            rule();
+        }
+    })
+
+    // uesr設定
+    btn.addEventListener("click", function(){
+        rule()
+    })
+
+    function rule(){
+        let u = Number(user.value);
+        console.log(u);
+
+        if(isNaN(u)){
+            msg = "請勿輸入文字";
+        }else if(u <= 0){
+            msg = "不可以小於 0";
+        }else if(u <= min){
+            msg = `不可以小於${min}`;
+        }else if(u >= max){
+            msg = `不可大於${max}`;
+        }else if(u == cpu){
+            msg = `您猜中了!${cpu}，共猜${count}次`;
+            gameover();
+        }else if(u > min && u < cpu){
+            min = u;
+            msg = `${min} ~ ${max}`;
+            count++;
+        }else if(u < max && u > cpu){
+            max = u;
+            msg = `${min} ~ ${max}`;
+            count++;
+        }else{
+            msg = `其他無法預期的錯誤`;
+        }
+
+        let li = document.createElement("li");
+        li.textContent = msg;
+        ul.appendChild(li);
+
+        user.value = "";
+        user.focus();
+
+        sp.textContent = `提示: ${min} ~ ${max}`;
+        console.log(min);
+        console.log(max);
+    }
+
+    function gameover(){
+        user.disabled = true;
+        btn.disabled = true;
+        reset.disabled = false;
+        reset.addEventListener("click", function(){
+            window.location.reload();
+        })
+    }
+
+    
+</script>

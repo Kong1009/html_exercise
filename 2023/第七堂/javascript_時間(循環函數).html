@@ -7,6 +7,7 @@
 </head>
 <body>
     <p></p>
+    <span id="test"></span>
 </body>
 </html>
 <script>
@@ -17,7 +18,7 @@
     // document.write(`${y} / ${month[m]} / ${date} ${dayarray[day]}`);
     // document.write(`${h}: ${mins}: ${s}`);
     let p = document.getElementsByTagName("p")[0];
-
+    let span = document.getElementById("test");
     // 循環函數
     setInterval(() => {
         let d = new Date();
@@ -35,7 +36,7 @@
         }
         p.textContent = `${y} / ${m+1} / ${date} / ${dayarray[day]} ${h}:${mins}: ${s<10 ? "0"+s : s }`;
         // p.textContent = `${y} / ${m+1} / ${date} / ${dayarray[day]} ${h}:${mins}: ${s}`;
-        
+        span.textContent = `${y}`
     });
 
     console.log(d);

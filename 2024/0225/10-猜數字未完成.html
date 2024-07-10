@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜數字遊戲</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* list-style: none; */
+        }
+
+        .box{            
+            width: 300px;
+            padding:1em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2em auto;
+            background-color: antiquewhite;            
+            font-family: sans-serif;
+            font-weight: 900;
+        }
+
+        .box h1{
+            text-align: center;
+            width: 100%;
+            padding: 0.5em 0;
+        }
+
+        .box h2{
+            width: 100%;
+            text-align: center;
+        }
+
+        .box input, .box button{            
+            font-size: 20px;
+            padding: 0.25em 0; 
+            text-align: center;
+            margin: 0.25em 0;
+        }
+
+        .box input{
+            width: 100%;
+        }
+
+        .box button{
+            width: 50%;
+        }
+
+        .box ul{
+            width: 100%;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>猜數字遊戲</h1>
+        <h2>剩餘時間: <span id="timer">05: 00</span></h2>
+        <h2>您已經猜: <span id="count">0 / 10次 </span></h2>
+        <input type="text" id="user" placeholder="請輸入兩位數" maxlength="4" autofocus>
+        <button type="button" id="reset" disabled>再玩一次</button>
+        <button type="button" id="btn">提交</button>
+
+        <ul>
+            
+        </ul>
+
+        <span></span>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let user = document.getElementById("user");
+    let reset = document.getElementById("reset");
+    let btn = document.getElementById("btn");
+    let ul = document.getElementsByTagName("ul")[0];
+    let timer = document.getElementById("timer");
+    let count = document.getElementById("count");
+    let c = 0;
+    let t = 300;
+    let d = new Date();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+    let txt;
+
+    // uesr
+
+    btn.addEventListener("click", function(){
+        
+        c++;
+        let u = Number(user.value);
+        if (isNaN(u)){
+            txt = `${c} 請勿輸入文字`;
+        }else if(user.value.length != 4){
+            txt = `${c} 請輸入4個數字`;
+        }else if(u[0] == u[1] || u[0] == u[2] || u[0] == u[3] || u[1] == u[2] || u[1] == u[3] || u[2] == u[3]){
+            txt = `${c} 數值不可重複`;
+        }else if(u[0] == cpu[0])
+
+        // let li = document.createElement("li");
+        // li.textContent = txt;
+
+        console.log(txt);
+        console.log(user.value[0]);
+        console.log(user.value[1]);
+        console.log(user.value[2]);
+        console.log(user.value[3]);
+        
+    })
+
+    // cpu
+    let cpu = [];
+    cpuRandom();
+    function cpuRandom(){
+        while (cpu.length < 4) {
+        let randomNum = Math.floor(Math.random() * 10);
+        if (!cpu.includes(randomNum)) {
+            cpu.push(randomNum);
+            }
+        }
+        console.log(cpu);
+    }
+
+
+    let cpuValue = toString(cpu);
+    console.log(cpuValue);
+</script>

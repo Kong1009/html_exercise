@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 300px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: antiquewhite;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            line-height: 3.5em;
+            
+        }
+
+        .box input{
+            width: 70%;
+            font-size: 20px;
+            padding: 0.3em 0.1em
+        }
+
+        .box button{
+            width: 30%;
+            font-size: 20px;
+            padding: 0.3em 0.1em
+        }
+
+        .box ul{
+            width: 100%;
+            list-style-position: inside;
+            text-align: left;
+        }
+
+        .box ul li:hover{
+            background-color: darkgoldenrod;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>學習計畫</h1>
+        <input type="text" id="user">
+        <button type="button" id="add">增加</button>
+
+        <ul>
+            <!-- <li>HTML</li>
+            <li>PhotoShop</li>
+            <li>Python</li>
+            <li>CSS</li> -->
+        </ul>
+    </div>
+</body>
+</html>
+
+<script>
+    let user = document.getElementById("user");
+    let add = document.getElementById("add");
+    let ul = document.getElementsByTagName("ul")[0];
+    add.addEventListener("click", function(){
+        addli();
+    })
+
+    user.addEventListener("keyup", function(e){
+        if (e.keyCode == 13){
+            addli();
+        }
+    })
+    
+    function addli(){
+        if (user.value == ""){
+            alert("不可空值");
+        }else{
+            let li = document.createElement("li");
+            li.setAttribute("class", "item");        
+            li.textContent = user.value;
+            ul.appendChild(li);
+            user.value = "";        
+            user.focus();
+    
+            let items = document.getElementsByClassName("item");
+            for (const item of items) {
+                item.addEventListener("click", function(){
+                    this.remove();
+                })
+            }
+        }
+    }
+
+</script>

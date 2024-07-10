@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // 陣列包物件
+    let car = [
+    {
+        name: "ToyoTa",
+        color: "Black",
+        cc: 1800,
+        price: 100000
+    },{
+        name: "BMW",
+        color: "White",
+        cc: 2000,
+        price: 150000
+    }
+]
+    console.log(car[1].name);
+
+    // 物件包物件
+    let address = {
+        "台北": {
+            name: "紅毛城",
+            time: "08:00 ~ 20:00"
+        },
+        "台中": {
+            name: "台中港",
+            time: "24Hr"
+        }
+    }
+    console.log(address["台中"].name);
+
+    // 物件包陣列
+    let card = {
+        name: ["Gary", "Mary"],
+        age: [18, 19],
+        gender: ["boy", "girl"]
+    }
+
+    console.log(card.age[1])
+</script>

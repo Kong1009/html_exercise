@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            透視點 perspective
+
+            變形 transform
+                scaleX() 水平縮放
+                scaleY() 垂直縮放
+                scaleZ() 前後縮放
+                scale(x, y) 縮放
+
+                skewX() 水平傾斜
+                skewY() 垂直傾斜
+                skewZ() 前後傾斜
+                skew() 傾斜
+
+                rotateX() 水平選轉
+                rotateY() 垂直選轉
+                rotateZ() 選轉
+                rotate() 選轉
+                
+                translateX() 水平移動
+                translateY() 垂直移動
+                translateZ() 前後移動
+                translate(x, y) 移動
+
+        */
+        div{
+            width: 300px;
+            height: 300px;
+            margin: calc(50vh - 150px) auto 0;
+            background-color: #000;
+            transition: all 500ms linear;
+            transform: perspective(800px);
+        }
+        
+        div:hover{
+            background-color: pink;
+            /* 縮放 */
+            transform: scaleX(2);
+            transform: scaleY(2);
+            transform: scaleZ(2);
+            transform: scale(1.5, 2);
+
+            /* 傾斜 */
+            transform: skewX(30deg);
+            transform: skewY(30deg);
+            transform: skew(30deg, 50deg);
+
+            transform: rotateX(45deg);
+            transform: rotateY(180deg);
+            /* transform: rotateZ(180deg); */
+            /* transform: rotate(45deg); */
+            
+
+            transform: translateX(30px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

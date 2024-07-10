@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            動畫 animation
+                animation-name: ; 動畫影格名稱
+                animation-duration: ; 動畫期間
+                animation-timing-function: ; 動畫曲線
+                animation-delay: ; 動畫延遲
+                animation-fill-mode: ; 動畫最終畫面
+                animation-iteration-count: ; 動畫次數
+                animation-play-state: ; 啟動/停止
+
+                animation: 名稱 期間 曲線 延遲 畫面 次數 啟動/停止;
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .load{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 30px solid green;
+            box-sizing: border-box;
+            /* background-color: greenyellow; */
+            position: fixed;
+            top: calc(50vh - 100px);
+            left: calc(50vw - 100px);
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+            animation: loading 1s linear infinite;
+
+            
+            
+        }
+
+        .load:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes loading{
+            0%{
+                transform: rotate(0);
+            }
+
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="load">
+
+    </div>
+</body>
+</html>

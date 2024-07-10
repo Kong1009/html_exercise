@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let as = [1, 2, 3, "HTML", "CSS", "JavaScript"]
+    let obj = {
+        name: "Gary",
+        age: 18,
+        gander: "boy",
+        tel: "0912345678"
+    }
+
+    // for of迴圈
+    for (const a of as) {
+        console.log(a);
+    }
+
+    console.log("---------------------");
+
+    // for in 迴圈
+    for (const key in obj) {
+        console.log(key);
+        console.log(obj[key]);
+    }
+
+
+    // 過去讀物件的方式
+    // 讀keys
+    let x = Object.keys(obj);
+    for (i = 0; i < x.length; i++){
+        console.log(obj[x[i]]);
+    }
+
+    // 讀value
+    let v = Object.values(obj);
+    for (i = 0; i < v.length ; i++){
+        console.log(v[i]);
+    }
+
+    // for (i = 0; i < 10; i++){
+    //     console.log(i);
+    // }
+    // console.log("最終值: ", i);
+
+</script>

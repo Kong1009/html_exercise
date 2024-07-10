@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    /*
+        增加陣列內容最後面新增 push()
+        刪除陣列內容最後面 pop()
+
+        增加陣列內容最前面新增 array.unshift("Nov");
+        刪除陣列內容最前面 array.shift();
+        
+        修改陣列內容 array.splice(開始位置, 刪除個數, 增加內容);
+        清除陣列內容(保留位置) delete array[5];
+    */ 
+    let array = ["Job", "Bob", "Mary", "Gary", "Jary", "Hary", "Alice", "Zac", "John", "Fany", "Ice"]
+    array.push("King", "Lee");
+    array.pop();
+    array.unshift("Nov", "Peter");
+    array.shift();
+    array.splice(2, 2);
+    for (const a of array) {
+        console.log(a);
+    }
+
+    delete array[5];
+    console.log(array);
+
+</script>

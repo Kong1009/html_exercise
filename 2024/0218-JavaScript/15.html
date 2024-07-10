@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1..Hellow</h1>
+    <h1>2..Hellow</h1>
+    <h1>3..Hellow</h1>
+    <h1>4..Hellow</h1>
+</body>
+</html>
+
+<script>
+    /*
+        選擇器讀取器 document.querySelectorAll
+            1. 可以讀取任何的選擇器，來做標籤
+            2. 無論是ID還是Class，後面都必須加上索引值[]
+            3. 可以使用陣列迴圈
+    */
+    let h1 = document.getElementsByTagName("h1")
+    for (i = 0; i < h1.length ; i ++){
+        console.log(h1[i].textContent);
+    }
+
+    console.log("===============for of====================")
+    for (const h of h1) {
+        console.log(h.textContent);
+    }
+
+    // console.log("===============for each====================")
+    // h1.forEach(function(e){
+    //     console.log(e);
+    // })
+
+    console.log("===============選擇器讀取器====================")
+    let user = document.querySelectorAll("h1");
+    for (const u of user) {
+        console.log(u.textContent);
+    }
+
+    user.forEach(function(e){
+        console.log(e.textContent);
+    });
+
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mius">-</button>
+    <span id="result">0</span>
+    <button id="add">+</button>
+    
+</body>
+</html>
+
+<script>
+    /*
+        監聽 addEventListener
+            滑鼠監聽
+                click 滑鼠點擊
+                mouseup 滑鼠放開
+                mousedown 滑鼠按下
+                mousemove 滑鼠移動
+                mouseenter, mouseover 滑鼠移入
+                mouseleave, mouseout 滑鼠移出
+
+    */
+    let mius = document.getElementById("mius");
+    let add = document.getElementById("add");
+    let result = document.getElementById("result");
+    let x = 0;
+    mius.addEventListener("click", function(){
+        x--;
+        if (x <= 0){
+            x = 0;
+        }
+        result.textContent = x;
+    })
+
+    // add.addEventListener("click", function(){
+    //     x++;
+    //     result.textContent = x;
+    // })
+
+    add.addEventListener("mousemove", function(){
+        x++;
+        result.textContent = x;
+    })
+    
+</script>

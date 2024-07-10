@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: inherit;
+        }
+
+        .box{
+            width: 300px;
+            padding: 1em;
+            background-color: antiquewhite;
+            margin: 2em auto;
+        }
+
+        .box h1, .box h4{
+            text-align: center;
+        }
+
+        
+
+        .box input, .box button{
+            width: 100%;
+            font-size: 20px;
+            margin: 0.5em 0;
+            padding: 0.25em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>BMI檢測器</h1>
+        <input type="text" placeholder="請輸入身高(cm)" id="height">
+        <input type="text" placeholder="請輸入體重(kg)" id="weight">
+        <button type="button" onclick="calc()">計算</button>
+        <h4>BMI:27.1，重度肥胖</h4>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    /*
+        四捨五入 Math.round
+        無條件捨去 Math.floor
+        無條件進位 Math.ceil
+    */
+    function calc(){
+        let h = Number(document.getElementById("height").value);
+        // let num_h = Number(h.value);
+        let w = Number(document.getElementById("weight").value);
+        // let num_w = Number(w.value);
+        let h4 = document.getElementsByTagName("h4")[0];
+        let bmi = Math.round(w / (h /100)**2);
+        // let bmi = Math.round(num_w / (num_h /100)**2);
+        let txt;
+        if (bmi < 18){
+            txt = `BMI: ${bmi}，過瘦`;
+        }else if(bmi < 24){
+            txt = `BMI: ${bmi}，標準`;
+        }else if(bmi < 28){
+            txt = `BMI: ${bmi}，過重`;
+        }else if(bmi < 30){
+            txt = `BMI: ${bmi}，輕度肥胖`;
+        }else if(bmi < 34){
+            txt = `BMI: ${bmi}，中度肥胖`;
+        }else{
+            txt = `BMI: ${bmi}，重度肥胖`;
+        }    
+
+        h4.textContent = txt;
+        
+    }
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button id="btn" type="button">切換</button>
+</body>
+</html>
+<script>
+    let btn = document.getElementById("btn");
+    let body = document.getElementsByTagName("body")[0];
+    let bool = true;
+    let month = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+    let wArray = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
+    let jpwArray = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"]
+    let h1 = document.getElementsByTagName("h1")[0];
+    let timer = setInterval(function(){
+        let d = new Date;
+        let y = d.getFullYear();
+        let m = d.getMonth(); // 依照陣列0-11 所以直接用會少1
+        let day = d.getDate();
+        let week = d.getDay(); // 依照陣列0-6 所以直接用會少1
+        let h = d.getHours();
+        let min = d.getMinutes();
+        let s = d.getSeconds();
+        h1.textContent = `${y}年 ${month[m]}月 ${day}日 ${jpwArray[week]} ${h}: ${min}: ${s}`;
+    })
+
+
+    h1.addEventListener("click", function(){
+        clearInterval(timer);
+    })
+
+        // 變更背景顏色
+        btn.addEventListener("click", function(){
+        // 透過bool旗標的方式來變換
+        if(bool){
+            body.style.backgroundColor = "#2b2b2b";
+            main.style.color = "#DDDDDD";
+            this.textContent = "日間模式";
+        }else{
+            body.style.backgroundColor = "#fff";
+            h1.style.color = "#000";
+            this.textContent = "夜間模式";
+        }
+        bool = !bool;
+    })
+
+
+    // console.log(d);
+
+</script>

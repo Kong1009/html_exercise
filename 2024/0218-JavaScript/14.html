@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="app" id="user">Hellow</h1>
+    <input type="text" value="20" name="name">
+</body>
+</html>
+
+<script>
+    /*
+        document.getElementsByTagName 讀取標籤 複數，所以要加[]
+        document.getElementsByClassName 讀取類別 複數，所以要加[]
+        document.getElementsByName 讀取Name 複數，所以要加[]
+        document.getElementByID 讀取ID
+
+        1. 一般元素讀取內容文字，使用textContent
+        2. 表單類元素(input, texarea, select, option)， 使用value讀取內容
+        3. 所有讀取器，都無法使用forEach除了 querySelectorAll
+        
+    */
+    let h1 = document.getElementsByTagName("h1")[0]
+    let app = document.getElementsByClassName("app")
+    let user = document.getElementById("user");
+    let _name = document.getElementsByName("name")[0];
+    console.log(h1);
+    console.log(h1.textContent);
+    console.log(app[0].textContent);
+    console.log(user.textContent);
+    console.log(_name.value);
+</script>

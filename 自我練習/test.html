@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #testdiv
+        {
+            width: 90%;
+            height: 50vh;
+            background-color: antiquewhite;
+        }
+
+        .text{
+            width: 40%;
+            background-color: red;
+        }
+
+        #testdiv .imgd{
+            width: 60%;
+            height: 100%;
+        }
+
+        #testdiv .imgd img{
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="testdiv" class="flex">
+        <div class="text">主角無關資訊網，藝。</div>
+        <div class="imgd">
+            <img src="https://picsum.photos/id/237/200/300" alt="">
+        </div>
+    </div>
+
+    
+</body>
+</html>

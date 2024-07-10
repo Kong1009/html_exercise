@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    
+</body>
+</html>
+<script>
+    let month = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+    let wArray = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
+    let jpwArray = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"]
+    let h1 = document.getElementsByTagName("h1")[0];
+    setInterval(function(){
+
+        let d = new Date;
+        let y = d.getFullYear();
+        let m = d.getMonth(); // 依照陣列0-11 所以直接用會少1
+        let day = d.getDate();
+        let week = d.getDay(); // 依照陣列0-6 所以直接用會少1
+        let h = d.getHours();
+        let min = d.getMinutes();
+        let s = d.getSeconds();
+        h1.textContent = `${y}年 ${month[m]}月 ${day}日 ${jpwArray[week]} ${h}: ${min}: ${s}`;
+    })
+
+    console.log(d);
+
+</script>
