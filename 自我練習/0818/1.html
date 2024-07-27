@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="www.yahoo.com.tw" id="myLink">yahoo</a>
+    <p></p>
+    <select name="" onchange="showName()" id="myName">
+        <option value="John">John</option>
+        <option value="Bill">Bill</option>
+        <option value="Mary">Mary</option>
+        <option value="Andy">Andy</option>
+    </select>
+</body>
+</html>
+
+<script>
+    let l = document.getElementById("myLink");
+    let p = document.getElementsByTagName("p")[0];
+    // alert(l.innerHTML+ "網址為:"+l.href);
+    alert(`${l.innerHTML}網址為:${l.href}`);
+    
+    function showName(){
+        let name = document.getElementById("myName").value;
+        alert(`Hello ${name}`);
+        p.textContent = name;
+    }
+    
+    console.log(name);
+</script>

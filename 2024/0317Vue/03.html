@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <title>Document</title>
+    <style>
+        #app{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #app .box{
+            width: calc(100% / 5);
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- <div class="box" v-for="c of curse" v-show="c.bool">
+            <h3>課程名稱：{{c.name}}</h3>
+            <p>課程簡介：{{c.txt}}</p>
+            <p>課程價格：{{c.price}}</p>            
+        </div> -->
+
+        <div class="box" v-for="c of curse" v-show="c.price < 3000">
+            <h3>課程名稱：{{c.name}}</h3>
+            <p>課程簡介：{{c.txt}}</p>
+            <p>課程價格：{{c.price}}</p>            
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                curse: [{
+                    name: "HTML",
+                    txt: "HTML5教學",
+                    price: 2000,
+                    bool: true,
+                },{
+                    name: "CSS",
+                    txt: "CSS3",
+                    price: 5000,
+                    bool: true,
+                },{
+                    name: "JavaScript",
+                    txt: "JavaScript教學",
+                    price: 2019,
+                    bool: false,
+                },{
+                    name: "Vue",
+                    txt: "Vu3教學",
+                    price: 3000,
+                    bool: true,
+                }]
+            }
+        }
+    }).mount("#app")
+
+</script>

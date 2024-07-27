@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 v-bind:class="color">Hello VUE</h1>        
+        <button type="button" v-on:click="change()">Change</button>
+
+        <h2 class="red">Hello VUE</h2>
+        <input type="button" value="click" onclick="red()">
+    </div>
+    
+</body>
+</html>
+
+<script>
+    // let bool = true;
+    Vue.createApp({
+        data(){
+            return{
+                color: "red",
+                bool: true,
+            }
+        },
+        methods:{
+            change(){
+                if (this.bool){
+                    this.color = "";
+                }else{
+                    this.color = "red"
+                }
+                this.bool = !this.bool;
+            }
+            // change(){
+            //     this.color.classList.toggle("red");
+            // }
+
+
+            
+        }
+    }).mount("#app")
+</script>
+
+<script>
+    function red(){
+        document.getElementsByTagName("h2")[0].classList.toggle("red");
+
+    }
+</script>

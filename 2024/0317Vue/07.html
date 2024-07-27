@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <app-card></app-card>
+    </div>
+    
+</body>
+</html>
+
+
+<script>
+    let app = Vue.createApp({
+        data(){
+            return{
+
+            }
+        }
+    })
+    app.component("app-card",{
+        book:[
+            {
+                name: "笑傲江湖",
+                boy: "boy",
+                girl: "girl"
+            },{
+                name: "笑傲江湖1",
+                boy: "boy1",
+                girl: "girl1"
+            },{
+                name: "笑傲江湖2",
+                boy: "boy2",
+                girl: "girl2"
+            },{
+                name: "笑傲江湖3",
+                boy: "boy3",
+                girl: "girl3"
+            }
+        ],
+        props:["book"],
+        template:
+            
+                '<h3>書名:{{b.name}}</h3>'+
+                '<p>男主角：</p>'+
+                '<p>女主角：</p>'
+            
+    })
+    // app.ponmonut()
+    app.mount("#app")
+</script>

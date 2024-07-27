@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-show會變成 display: none -->
+        <h1 v-show="bool">Hello Show</h1>
+
+        <!-- v-if 會直接關閉 -->
+        <h1 v-if="bool">Hello if</h1>
+
+        <button v-on:click="change()">隱藏</button>
+    </div>
+</body>
+</html>
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                bool: false
+            }
+        },
+        methods:{
+            change(){
+                this.bool = !this.bool;
+            }
+        }
+    }).mount("#app")
+
+</script>

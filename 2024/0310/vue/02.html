@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="b of cla">{{b}}</li>
+        </ul>
+        <ul>
+            <li v-for="b1 of book">
+                <h3>書名:  {{b1.name}}</h3>
+                <p>男主角: {{b1.boy}}</p>
+                <p>女主角: {{b1.girl}}</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                cla: ["HTML", "CSS", "JavaScript", "Vue"],
+                book: [{
+                    name: "天龍八部",
+                    boy: "b1",
+                    girl: "g1"
+                },{
+                    name: "射鵰英雄傳",
+                    boy: "b2",
+                    girl: "g2"
+                },{
+                    name: "神鵰俠侶",
+                    boy: "b3",
+                    girl: "g3"
+                }]
+            }
+        }
+    }).mount("#app");
+</script>

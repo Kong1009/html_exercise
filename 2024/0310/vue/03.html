@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="x<18">過輕</p>
+        <p v-else-if="x<24">標準</p>
+        <p v-else-if="x<28">過重</p>
+        <p v-else-if="x<30">輕度肥胖</p>
+        <p v-else-if="x<34">中度肥胖</p>
+        <p v-else-if="x>=34">重度肥胖</p>
+        <p v-else>其他</p>
+                
+    </div>
+    
+</body>
+</html>
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                
+                x: 28
+            }
+        }
+
+    }).mount("#app")
+</script>

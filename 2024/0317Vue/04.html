@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <title>Document</title>
+    <style>
+        #app{
+            width: 350px;
+            margin: 2em auto;
+            font-size: 0;
+        }
+        #app input, #app button{
+            
+            font-size: 20px;
+        }
+        #app input{
+            width: 80%;
+        }
+        #app button{
+            width: 15%;
+        }
+
+        #app ul{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="user">
+        <button type="button" v-on:click="add()">ADD</button>
+        <ul v-for="(a, idx) of array">
+            <!-- @click 同v-on:click -->
+            <li @click="del(idx)">{{a}}</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                user: "",
+                array:["HTML","CSS"],                
+            }
+            
+            
+            
+        },
+        methods:{
+            add(){
+                this.array.push(this.user);
+                this.user = "";
+                console.log(this.array);
+            },
+            del(idx){
+                this.array.splice(idx,1);
+            }
+        }
+    }).mount("#app")
+</script>

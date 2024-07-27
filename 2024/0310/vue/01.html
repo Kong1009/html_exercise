@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="box">
+            <h1>{{title.name}}</h1>
+            <p>{{title.boy}}</p>
+            <p>{{title.girl}}</p>
+        </div>
+        <div class="box">
+            <h1>{{sky.name}}</h1>
+            <p>{{sky.boy}}</p>
+            <p>{{sky.girl}}</p>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                title: {
+                    name: "金庸小說: 笑傲江湖",
+                    boy: "boy",
+                    girl: "girl",
+                },
+                sky:{
+                    name: "倚天屠龍記",
+                    boy:  "boy1",
+                    girl: "girl1",
+                }
+            }
+        }
+    }).mount("#app")
+</script>

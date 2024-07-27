@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">收</button>
+    <img src="http://picsum.photos/id/11/100/100" style="display: block;" alt="" id="ig">
+    <!-- <div id="red" style="width: 100px; height: 100px; background-color: #ff0000">
+        lcc
+        <br>
+        lcc
+        <br>
+    </div> -->
+    <p>Meet Job</p>
+    
+</body>
+</html>
+
+<script>
+    let bool = true;
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            $("#ig").slideToggle();
+            // $("#red").fadeToggle();
+            
+            if (bool){
+                this.textContent = "開";
+            }else{
+                this.textContent = "收";
+            }
+            bool = !bool;
+            
+        })
+    })
+</script>

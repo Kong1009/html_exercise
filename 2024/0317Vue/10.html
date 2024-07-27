@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        table{
+            width: 500px;
+            height: 550px;
+            margin: 2em auto;
+            text-align: center;
+            font-size: 2em;
+            font-family: sans-serif;
+        }
+        table tr td{
+            width: 80px;
+            height: 100px;
+        }
+        table tr th:nth-of-type(1){
+            width: 300px;
+            text-align: right;
+            padding: 0 2em;
+            background-color: #000;
+            color: #fff;
+        }
+        table tr th:nth-of-type(2){
+            width: 100px;
+        }
+
+        
+        *[class^=btn]{
+            box-shadow: 3px 3px 3px gray;
+            border-radius: 5%;
+        }
+        *[class^=btn]:active{
+            box-shadow: 3px 3px 3px gray inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <table class="box" border="1" cellspacing="5" >
+            <tr>
+                <th id="show" colspan="3">{{source}}</th>
+                <th class="btn" @click="clear()">C</th>
+            </tr>
+
+            <tr>
+                <td class="btn" @click="add('7')">7</td>
+                <td class="btn" @click="add('8')">8</td>
+                <td class="btn" @click="add('9')">9</td>
+                <td class="btn" @click="add('/')">/</td>
+            </tr>
+            <tr>
+                <td class="btn" @click="add('4')">4</td>
+                <td class="btn" @click="add('5')">5</td>
+                <td class="btn" @click="add('6')">6</td>
+                <td class="btn" @click="add('*')">*</td>
+            </tr>
+            <tr>
+                <td class="btn" @click="add('1')">1</td>
+                <td class="btn" @click="add('2')">2</td>
+                <td class="btn" @click="add('3')">3</td>
+                <td class="btn" @click="add('-')">-</td>
+            </tr>
+            <tr>
+                <td class="btn" @click="add('.')">.</td>
+                <td class="btn" @click="add('0')">0</td>
+                <td class="btn" @click="calc()">=</td>
+                <td class="btn" @click="add('+')">+</td>
+            </tr>
+
+
+        </table>
+    </div>
+
+    
+</body>
+</html>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    let app = Vue.createApp({
+        data(){
+            return{
+                source: "",
+            }
+        },
+        methods:{
+            add(v){
+                this.source += v
+            },
+            clear(){
+                this.source = ""
+            },
+            calc(){
+                this.source = eval(this.source);
+            }
+        }
+    });
+    app.mount("#app")
+    
+</script>

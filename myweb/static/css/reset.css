@@ -1,0 +1,9 @@
+html, body, header, footer, menu, h1, h2, h3, h4, h5, h6, ul, li, div, a, p, span{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="height" placeholder="請輸入身高(CM)" id="height">
+        <input type="text" v-model="weight" placeholder="請輸入體重(KG)" id="weight">
+        <button type="button" v-on:click="calc()">提交</button>
+        <p v-if="bmi==0 || bmi == ''"></p>
+        <p v-else-if="bmi<18">過輕</p>
+        <p v-else-if="bmi<24">標準</p>
+        <p v-else-if="bmi<28">過重</p>
+        <p v-else-if="bmi<30">輕度肥胖</p>
+        <p v-else-if="bmi<34">中度肥胖</p>
+        <p v-else-if="bmi>=34">重度肥胖</p>
+        <p v-else>輸入錯誤</p>
+                
+    </div>
+    
+</body>
+</html>
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                height: "",
+                weight: "",
+                bmi: 0
+            }
+        },
+        methods: {
+            calc(){
+                this.bmi = Math.round(this.weight / (this.height / 100)**2 * 10) / 10;
+            }
+        }
+    }).mount("#app")
+</script>

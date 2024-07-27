@@ -1,0 +1,242 @@
+html, body, header, main, footer, nav, menu, div, h1, h2, h3, h4, h5, h6, ul, li, a, p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    font-family: sans-serif;    
+}
+:root{
+    --themeColor--: #22211F;
+    --themeRed--: #9F3E49;
+
+}
+.hr_div{
+    width: 100%;
+}
+
+*[class^=line]{
+    width: 50px;
+    height: 4px;
+    background-color: var(--themeRed--);
+    margin: 1em auto;    
+}
+
+*[class^=title]{
+    width: 100%;
+}
+
+
+body{
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(https://picsum.photos/id/112/1000/600);    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.5; /* 調整這裡的透明度 */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+header{
+    width: 100%;
+}
+
+header #head_bar{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--themeColor--);
+    color: #fff;    
+    /* font-size: 20px; */
+    height: 70px;
+    line-height: 70px;
+    
+}
+header #head_bar.flex{
+    justify-content: space-around;
+}
+
+#head_bar #logo{
+    width: 20%;
+    text-align: center;
+}
+header #head_bar nav{
+    text-align: center;
+}
+
+#head_bar nav ul li{
+    margin: 0 1em;
+}
+
+header #head_bar nav ul li a{
+    display: block;
+    padding:0 1em;
+    font-weight: 900;
+}
+header nav ul li a:hover{
+    background-color: #5d5c5c;
+    border-radius: 5%;
+    transition: all 500ms linear;
+}
+
+#carousel.flex{
+    justify-content: center;
+}
+
+header #carousel{
+    /* background-color: yellow; */
+    width: 50%;
+    margin: 4em auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+header #carousel h1{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+header #carousel .hr_div{
+    width: 100%;    
+}
+
+
+header #carousel p{
+    text-align: center;
+    color: #fff;
+}
+
+header #carousel img{
+    background-position: center;
+    background-size: cover;
+}
+main{
+    width: 100%;
+}
+
+main #about{
+    width: 100%;
+    /* height: 100px; */
+    background-color: var(--themeRed--);
+    text-align: center;
+    color: #fff;
+    padding: 4em 0 2em;
+    
+}
+#about.flex{
+    justify-content: center;
+}
+
+.line-about{
+    background-color: #fff;    
+}
+
+.txt-about{
+    width: 70%;
+    margin: 2em 0 1em;
+    text-align: center;    
+}
+.txt-about p{
+    margin: 1em;
+}
+
+#skill{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    padding: 4em 0 3em;
+    background-color: #fff;    
+}
+
+#skill .skill-div.flex{
+    justify-content: center;
+}
+#skill .skill-div{
+    margin: 3em 0 0;
+}
+
+.skill-div .skill-introduce{
+    text-align: center;    
+    width: 280px;
+    height: 300px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 2px #000;
+    padding: 0.5em;
+    margin: 0 1em;
+    align-content: center;
+}
+
+.skill-div .skill-introduce h3{
+    margin: 1em 0 1.5em;
+}
+
+
+
+#works{
+    width: 100%;
+    padding: 4em 2em;
+    text-align: center;
+}
+#works .work-pics.flex{
+    justify-content: center;
+}
+#works .work-pics{
+    width: 800px;
+    margin: 1em auto;
+}
+#works .work-pics .pic{
+    width: 250px;
+    margin: 0.5em;
+    
+}
+
+#contact{
+    width: 100%;
+    text-align: center;
+    background-color: var(--themeRed--);
+    padding: 4em 0 2em;
+}
+
+.line-contact{
+    background-color: #fff;    
+}
+
+.contact-form-div{
+    width: 70%;
+    margin: 0 auto;
+}
+.contact-form-div form{
+    width: 100%;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer p{
+    margin: 0.5em;
+}

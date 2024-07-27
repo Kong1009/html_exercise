@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #app{
+            width: 300px;
+            padding: 1em;
+            margin: auto;
+        }
+
+        #app input{
+            width: 100%;
+            font-size: 24px;
+        }
+        #app progress{
+            width: 100%;
+            height: 30px;
+            accent-color: red;            
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="password" placeholder="密碼" id="pwd">
+        <button type="button">顯示</button>
+        <progress max="100" value="0"></progress><span id="strong"></span>
+        
+    </div>
+</body>
+</html>
+<script>
+    let pro = document.getElementsByTagName("progress")[0];
+    let sp = document.getElementById("strong");
+    let pwd = document.getElementById("pwd").addEventListener("keyup", function(){
+        let colorName = "red";
+        let calc = 0;
+        let strgonTxt = "";
+        if (this.value.length >= 8){
+            calc += 20;
+        }
+        if(/[a-z]/.test(this.value)){
+            calc += 20;
+        }
+        if(/[A-Z]/.test(this.value)){
+            calc += 20;
+        }
+        if(/\d/.test(this.value)){
+            calc += 20;
+        }
+        if(/\W/.test(this.value)){
+            calc += 20;
+        }
+
+        if(calc <= 20){
+            colorName = "red";
+            strgonTxt = "太弱"
+        }else if(calc <= 40){
+            colorName = "orange";
+            strgonTxt = "弱"
+        }else if(calc <= 60){
+            colorName = "green";
+            strgonTxt = "中"
+        }else if(calc <= 80){
+            colorName = "aqua";
+            strgonTxt = "強"
+        }else if(calc <= 100){
+            colorName = "blue";
+            strgonTxt = "頂級"
+        }
+
+        pro.style.accentColor = colorName;
+        sp.textContent = strgonTxt
+        sp.style.color = colorName
+        pro.value = calc;
+        console.log(calc);
+    })
+
+</script>

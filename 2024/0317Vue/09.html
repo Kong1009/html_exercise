@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        table{
+            width: 500px;
+            height: 550px;
+            margin: 2em auto;
+            text-align: center;
+            font-size: 2em;
+            font-family: sans-serif;
+        }
+        table tr td{
+            width: 80px;
+            height: 100px;
+        }
+        table tr th:nth-of-type(1){
+            width: 300px;
+            text-align: right;
+            padding: 0 2em;
+            background-color: #000;
+            color: #fff;
+        }
+        table tr th:nth-of-type(2){
+            width: 100px;
+        }
+
+        
+        *[class^=btn]{
+            box-shadow: 3px 3px 3px gray;
+            border-radius: 5%;
+        }
+        *[class^=btn]:active{
+            box-shadow: 3px 3px 3px gray inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <table class="box" border="1" cellspacing="5" >
+            <tr>
+                <th id="show" colspan="3"></th>
+                <th class="btn-clear">C</th>
+            </tr>
+
+            <tr>
+                <td class="btn">7</td>
+                <td class="btn">8</td>
+                <td class="btn">9</td>
+                <td class="btn">/</td>
+            </tr>
+            <tr>
+                <td class="btn">4</td>
+                <td class="btn">5</td>
+                <td class="btn">6</td>
+                <td class="btn">*</td>
+            </tr>
+            <tr>
+                <td class="btn">1</td>
+                <td class="btn">2</td>
+                <td class="btn">3</td>
+                <td class="btn">-</td>
+            </tr>
+            <tr>
+                <td class="btn">.</td>
+                <td class="btn">0</td>
+                <td class="btn-result">=</td>
+                <td class="btn">+</td>
+            </tr>
+
+
+        </table>
+    </div>
+
+    
+</body>
+</html>
+<script>
+    let show = document.getElementById("show");
+    let btns = document.getElementsByClassName("btn");
+
+    for (const btn of btns) {
+        btn.addEventListener("click", function(){
+            if (show.textContent.length >= 12){
+                show.textContent += "";
+            }else{
+                show.textContent += this.textContent;
+            }
+        })
+    }
+    document.getElementsByClassName("btn-clear")[0].addEventListener("click", function(){
+        show.textContent = "";
+    })
+    document.getElementsByClassName("btn-result")[0].addEventListener("click", function(){
+        show.textContent = eval(show.textContent);
+        
+    })
+</script>
+<!-- <script>
+    Vue.createApp({
+
+    }).mount("#app")
+</script> -->
