@@ -1,3 +1,9 @@
 伺服器空間
 ServerZoo
 https://www.serverzoo.com/
+
+aws
+https://aws.amazon.com/tw/free/?gclid=Cj0KCQjwtsy1BhD7ARIsAHOi4xb8CU_1lyAmfBasrgG62YphKjkD40PNwo362yuN6ZfNKbW4Irg0BJQaAogEEALw_wcB&trk=cf0164b0-a143-4575-9482-010451b8f1d5&sc_channel=ps&ef_id=Cj0KCQjwtsy1BhD7ARIsAHOi4xb8CU_1lyAmfBasrgG62YphKjkD40PNwo362yuN6ZfNKbW4Irg0BJQaAogEEALw_wcB:G:s&s_kwcid=AL!4422!3!595905315029!e!!g!!aws!17115100998!136234409996&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all
+
+heroku
+https://www.heroku.com/
