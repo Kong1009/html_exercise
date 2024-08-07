@@ -1,0 +1,78 @@
+html, body, header, main, footer, nav, menu, div, section, h1, h2, h3, h4, h5, h6, ul, li, a, p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    /* font-family: sans-serif; */
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+html{
+    /* 滑動效果 */
+    scroll-behavior: smooth;
+}
+
+:root{
+    --themeColor--: #22211F;
+    --themeRed--: #e2c742;
+}
+
+.hr_div{
+    width: 100%;
+    /* background-color: #e2c742; */
+}
+
+*[class^=line]{
+    width: 50px;
+    height: 2px;
+    /* background-color: var(--themeRed--); */
+    margin: 1em auto;
+    border-bottom: 5px solid var(--themeRed--);
+}
+
+*[class^=title]{
+    width: 100%;
+    color: rgb(133, 32, 32);
+    font-size: 1.5rem;
+}
+
+img{
+    width: 100%;
+    /* vertical-align: bottom; */
+}
+
+
+body{
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(https://picsum.photos/id/114/1000/600);    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.5; /* 調整這裡的透明度 */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}

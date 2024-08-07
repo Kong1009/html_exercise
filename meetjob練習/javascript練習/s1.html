@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function display(){
+            document.write("這個是函式");
+        }
+        function convertTemp(dc){
+            return dc * 1.8 + 32; // 攝氏轉華氏
+        }
+    </script>
+
+    <h1>標題</h1>
+    <hr>
+    <script>
+        display();
+
+        let temp = prompt("請輸入攝氏溫度");
+        document.write(`轉換後華氏溫度為:${convertTemp(temp)}`);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/01.jpg" alt="智慧小車車1">
+    <img src="img/02.jpg" alt="智慧小車車2">
+    <img src="img/03.jpg" alt="智慧小車車3">
+    
+</body>
+</html>
+
+<script>
+    let allImg = document.getElementsByTagName("img");
+    msg = "";
+    for (let i = 0; i< allImg.length ; i++){
+        msg += `第${i+1}本，>>>>>>>>>>>>>>>>書名為:${allImg[i].alt}\n`;
+    }
+    alert(msg);
+
+
+</script>

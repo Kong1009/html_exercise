@@ -1,0 +1,14 @@
+/* Google字型 */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* 共同使用的css */
+@import url("joint.css"); 
+
+/* 共同使用的header */
+@import url("header.css");
+
+/* 共同使用的main */
+@import url("main.css");
+
+/* footer.css */
+@import url("footer.css");

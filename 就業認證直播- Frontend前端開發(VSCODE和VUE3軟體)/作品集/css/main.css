@@ -1,0 +1,171 @@
+main{
+    width: 100%;
+}
+
+#carousel.flex{
+    justify-content: center;
+}
+
+#carousel{
+    /* background-color: yellow; */
+    width: 50%;
+    margin: 4em auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#carousel h1{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+#carousel .hr_div{
+    width: 100%;
+}
+
+
+
+
+
+
+#carousel p{
+    text-align: center;
+    color: #fff;
+}
+
+#carousel img{
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+main #about{
+    width: 100%;
+    /* height: 100px; */
+    background-color: var(--themeRed--);
+    text-align: center;
+    color: #fff;
+    padding: 4em 0 2em;
+    
+}
+#about.flex{
+    justify-content: center;
+}
+
+#about .line-about{
+    /* background-color: #fff; */
+    border-bottom: 5px solid #fff;
+}
+
+.txt-about{
+    width: 70%;
+    margin: 2em 0 1em;
+    text-align: center;    
+}
+.txt-about p{
+    margin: 1em;
+}
+
+
+/* ---------------- Skill ---------------- */
+#skill{    
+    background-color: #fff;
+    padding: 2em 0;
+    width: 100%;
+    text-align: center;
+}
+.skill-div.flex{
+    justify-content: space-around;
+}
+
+.skill-div{        
+    margin: 0 auto;
+}
+
+.skill-introduce{
+    width: 20%;
+    box-shadow: 2px 2px 2px #000;
+    padding: 1rem 0;
+}
+
+.skill-introduce p{
+    width: 90%;
+    height: 200px;
+    margin: 0.5rem auto;
+    padding:0 0 0.5rem 0;
+    border-bottom: 1px solid #000;
+    align-content: center;
+}
+
+.skill-introduce p img{    
+    /* height: 100%;     */
+}
+
+.skill-introduce ul{
+    /* background-color: red; */
+    font-size: 12px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+/* ---------------- works ---------------- */
+#works{
+    width: 100%;
+    padding: 4em 2em;
+    text-align: center;
+}
+#works .work-pics.flex{
+    justify-content: center;
+}
+#works .work-pics{
+    width: 800px;
+    margin: 1em auto;
+}
+#works .work-pics .pic{    
+    position: relative;
+    width: 250px;
+    margin: 0.5em;
+    overflow: hidden;
+}
+
+.pic .push{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    top: 0;
+    left: 0;
+    color: #fff;
+    opacity: 0;
+    background-color: rgba(1, 12, 32, 0.5);
+    /* background-color: red; */
+    transition: all 500ms ease;    
+
+}
+
+.pic .push:hover{
+    opacity: 1;
+    top: 0;
+}
+
+
+#contact{
+    width: 100%;
+    text-align: center;
+    background-color: var(--themeRed--);
+    padding: 4em 0 2em;
+}
+
+.line-contact{
+    background-color: #fff;    
+}
+
+.contact-form-div{
+    width: 70%;
+    margin: 0 auto;
+}
+.contact-form-div form{
+    width: 100%;
+}

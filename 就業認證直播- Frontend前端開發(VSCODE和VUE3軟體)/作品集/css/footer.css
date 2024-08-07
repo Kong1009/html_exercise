@@ -1,0 +1,10 @@
+/* footer */
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer p{
+    margin: 0.5em;
+}

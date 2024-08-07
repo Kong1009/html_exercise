@@ -228,6 +228,7 @@ main .grid-12{
     color: #fff;
     background-color: var(--alpha);
 }
+
 /* contact's design */
 #contact{
     background-color: var(--contact);
@@ -295,13 +296,13 @@ footer{
         display: inline-block;
     }
     header nav ul{
-        text-align: right;            
+        text-align: right;
     }
     header .bar{
         display: none;
     }
     #theme .push{
-        padding-top: 20%;                
+        padding-top: 20%;
     }
     #theme .push h2{
         font-size: 2em;

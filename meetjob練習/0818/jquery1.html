@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- https://developers.google.com/speed/libraries?hl=zh-tw#jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    <!-- 
+        $(document).ready(functino(){
+        
+        });
+
+        簡化:
+        $(function(){
+
+        });
+    -->
+</head>
+<body>
+    <ul>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+    </ul>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        alert("hello jQuery")
+        
+    });
+    // $(function(){
+
+    // })
+    $(document).ready(function(){
+        // alert("Hello jQuery");
+        // $("ul li").css({"color":"blue"});
+        $("ul li").css({"color":"red", "font-size":"32px", "list-style":"none"})
+    });
+</script>

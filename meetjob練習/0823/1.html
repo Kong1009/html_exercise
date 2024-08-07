@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button class="click">淡出</button>
+    <p class="show1">1聯成電腦 MeetJob課程</p>
+    <p class="show2">2聯成電腦 MeetJob課程</p>
+    <p class="show3">3聯成電腦 MeetJob課程</p>
+    <p id="show4">4聯成電腦 MeetJob課程</p>
+    
+</body>
+</html>
+
+<script>
+    let bool = true;
+    $(document).ready(function(){
+        $(".click").click(function(){
+            
+            if(bool){
+                this.textContent = "淡入"
+                $(".show1").fadeOut();
+                $(".show2").fadeOut("fast");
+                $(".show3").fadeOut("slow");
+                $("#show4").fadeOut(3000);
+            }else{
+                this.textContent = "淡出";
+                $(".show1").fadeIn();
+                $(".show2").fadeIn("fast");
+                $(".show3").fadeIn("slow");
+                $("#show4").fadeIn(3000);
+            }
+            bool = !bool;
+
+
+            
+        })
+    });
+</script>

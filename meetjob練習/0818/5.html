@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" class="click">隱藏</button>
+    <p></p>
+    <p class="test">聯成電腦</p>
+    <img src="http://picsum.photos/id/1/800/600" alt="" class="imgg">
+    
+</body>
+</html>
+<script>
+    $(function(){
+        let bool = true;
+        $(".click").click(function(){
+            $(".test").toggle();
+            $(".imgg").toggle();
+            // .hide()隱藏
+            // .show()顯示
+            // .toggle()切換       
+            bool = !bool;     
+            if(bool){
+                this.textContent = "隱藏";
+            }else{
+                this.textContent = "顯示";
+            }
+            
+        })
+    });
+</script>
